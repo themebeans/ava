@@ -1,0 +1,27 @@
+.hfeed.posts--default {
+
+    article {
+        margin-bottom: 50px;
+
+        .entry-content p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .post__divide {
+            width: 60px;
+            margin: 80px auto 70px;
+
+            @media only screen and (min-width: 769px) {
+                margin: 120px auto 100px;
+            }
+        }
+
+        &:last-of-type .post__divide {
+            display: none;
+        }
+    }
+}
+
+.cookbook-recipe {
+	text-align: left;
+}

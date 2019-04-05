@@ -1,0 +1,61 @@
+.site-title-banner {
+    display: table;
+    height: 60px;
+    position: relative;
+    width: 100%;
+    margin-bottom: -1px;
+    background: $lightgray;
+    z-index: 999;
+    @media only screen and (min-width: 769px) {
+        margin-bottom: 20px;
+        height: 80px;
+        line-height: normal;
+    }
+
+    .search & {
+        margin-bottom: 40px;
+        @media only screen and (min-width: 769px) {
+            margin-bottom: 30px;
+        }
+    }
+    
+    .entry-header--wrappper__inner {
+        display: table-cell;
+        padding: 0!important;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    h1 {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 20px;
+        color: $black;
+        @media only screen and (min-width: 769px) {
+            font-size: 28px;
+        }
+    }
+
+    .single-product & {
+        margin-bottom: 0 !important;
+    }
+
+    .back-to-shop {
+        font-size: 11px;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 5vw;
+        transform: translatey(-40%);
+        
+        .icon {
+            top: -0.085em;
+            margin-right: 5px;
+        }
+
+        &:hover .icon {
+            animation: iconLeft 1s infinite;
+        }
+    }
+}

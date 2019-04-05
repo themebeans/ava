@@ -1,0 +1,80 @@
+.portfolio--liam {
+
+    .portfolio {
+        position: relative;
+    }
+
+    &__parallax_item {
+        min-height: 400px;
+    }
+
+    .project {
+
+        &__link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+	&__background {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+        &__overlay {
+            box-sizing: border-box;
+            left: 5vw;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            transform: translate3d(0, -50%, 0) !important;
+            width: calc(100% - 10vw);
+            z-index: 12;
+
+            h2 {
+                display: inline-block;
+                font-size: 40px;
+                font-weight: normal;
+                line-height: 1.1em;
+                margin: 0;
+                padding: 10px 0;
+                pointer-events: auto;
+                position: relative;
+                transition: opacity 200ms ease-in-out, color 150ms linear;
+
+                @media screen and (max-width: 1920px) and (min-width: 600px) {
+                    font-size: 6.5vw;
+                }
+
+                @media screen and (min-width: 769px) {
+                    padding: 1vw 0;
+                }
+
+                @media screen and (min-width: 1921px) {
+                    font-size: 130px;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+.parallax-mirror:before {
+    background: #000;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: .1;
+}

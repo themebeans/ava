@@ -1,0 +1,12 @@
+.bb--title {
+    padding: 20px 0;
+    text-align: center;
+
+    h2 {
+        font-size: 28px;
+        @media screen and (min-width: 769px) {
+            font-size: 40px;
+        }
+
+    }
+}

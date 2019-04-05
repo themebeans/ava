@@ -1,0 +1,39 @@
+.fl-module-social-proof {
+
+    .beaver--social-proof {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        max-width: 70%;
+        width: 100%;
+        @media (min-width: 769px) {
+            margin-top: 0;
+        }
+        
+        .social-proof__logo {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            flex: 0 0 50%;
+
+            @media (min-width: 769px) {
+                flex-basis: 25%;
+                margin-bottom: 0;
+            }
+
+            img {
+                max-width: 40%;
+                @media (min-width: 1500px) {
+                    max-width: 30%;
+                }
+                @media (min-width: 1900px) {
+                    max-width: 25%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,253 @@
+.site-colophon {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+
+    .site-info {
+        width: 100%;
+
+        @include tablet {
+            span {
+                display: block;
+
+                & + span {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .site-copyright {
+        opacity: .33;
+    }
+
+    .site-theme a {
+        opacity: .33;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &:not(.colophon-3) .main-navigation {
+    
+        @include tablet {
+            width: 100%;
+            ul li {
+
+                display: block;
+                margin: 0;
+            }
+        }
+        
+        @include desktop {
+            + .social-wrapper {
+                margin-left: 50px;
+            }
+        }
+
+    }
+        
+    .main-navigation {
+        
+        &:hover a {
+            opacity: .5;
+        }
+
+        a {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__right.flex__center {
+        @include tablet {
+            display: block;
+        }
+    }
+
+    .colophon-navigation {
+        @media screen and (max-width: 900px) and (min-width: 769px) {
+            display: none;
+        }
+    }
+}
+
+[data-colophon="colophon-2"][data-colophon-social="true"] .site-colophon__left .social-navigation {
+    margin-right: 50px;
+}
+
+[data-colophon="colophon-1"],
+[data-colophon="colophon-2"] {
+    
+    .site-colophon {
+
+        &__inner {
+            box-sizing: border-box;
+            padding: 5px 15px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+
+            @include desktop {
+                display: flex;
+                text-align: left;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+        
+        @include desktop {
+            &__left {
+                flex: 1 1 0px;
+            }
+
+            &__right {
+                flex: 1 1 0px;
+                text-align: right;
+                justify-content: flex-end;
+            }
+
+        }
+
+    }
+
+}
+
+
+[data-colophon="colophon-1"] {
+    .site-colophon {
+
+        .main-navigation {
+
+            @include tablet {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+
+[data-colophon="colophon-2"] {
+    .site-colophon {
+
+        .main-navigation {
+            @include tablet {
+                margin-bottom: 40px;
+            }
+        }
+     }
+
+    @include desktop {
+        
+        .site-colophon {
+
+            .site-info {
+                justify-content: flex-end;
+                display: flex;
+                align-items: right;
+                flex: 1 1 auto;
+                
+                .site-copyright {
+                    box-sizing: border-box;
+                    order: 2;
+                    flex: 0 0 auto;
+                }
+
+                .site-theme {
+                    flex: 0 0 auto;
+                    display: flex;
+                    justify-content: flex-start;
+                    order: 1;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+
+[data-colophon="colophon-3"] {
+    .site-colophon {
+        
+        @media screen and (max-width: 599px) {
+            padding: 40px 0;
+        }
+
+        &__inner {
+            padding: 5px 15px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .social-wrapper,
+        .colophon-navigation {
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        .main-navigation {
+            display: inline-block;
+        }
+
+        @include desktop {
+
+            &__inner {
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .social-wrapper,
+            .colophon-navigation {
+                display: block;
+            }
+
+            .colophon-navigation {
+                display: inline-block;
+            }
+            
+            &[data-colophon-social="true"] {
+                .site-info {
+                    margin-top: 30px;
+                }
+            }
+
+            .social-wrapper {
+                margin-bottom: 50px;
+            }
+
+            .colophon-navigation {
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+
+
+//--------------------------------------------------------------
+// Customizer Layout Live Previewing
+//--------------------------------------------------------------
+[data-colophon="colophon-1"] {
+    .site-colophon:not(.colophon-1) {
+        @include hide();
+        display: none;
+    }
+
+}
+
+[data-colophon="colophon-2"] {
+    .site-colophon:not(.colophon-2) {
+        @include hide();
+        display: none;
+    }
+}
+
+[data-colophon="colophon-3"] {
+    .site-colophon:not(.colophon-3) {
+        @include hide();
+        display: none;
+    }
+}

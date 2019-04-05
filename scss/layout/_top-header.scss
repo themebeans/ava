@@ -1,0 +1,118 @@
+.site-top-header {
+    box-sizing: border-box;
+    display: none;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+    z-index: 9998;
+    @include font-size(11px);
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	font-weight: normal;
+    @media only screen and (min-width: 769px) {
+        display: block;
+    }
+
+    .site-header--fixed &,
+    .site-header--absolute & {
+        display: none;
+    }
+
+    & .main-navigation li {
+        margin: 0 7px;
+
+        a {
+            vertical-align: middle;
+            transition: opacity 200ms cubic-bezier(0.33,0,0.2,1);
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    & .main-navigation:hover li a {
+        opacity: .5;
+
+        &:hover {
+           opacity: 1;
+        }
+    }
+}
+
+[data-top-header="top-header-1"],
+[data-top-header="top-header-2"],
+[data-top-header="top-header-3"] {
+
+    @media only screen and (min-width: 769px) {
+
+        .site-top-header {
+
+            &__inner {
+                align-items: center;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+                min-height: 35px;
+                padding: 5px 15px;
+            }
+
+            &__left {
+                flex: 1 1 0px;
+            }
+
+            &__right {
+                flex: 1 1 0px;
+                justify-content: flex-end;
+                text-align: right;
+            }
+
+        }
+
+    }
+
+}
+
+[data-top-header="top-header-1"],
+[data-top-header="top-header-3"] {
+
+    .site-top-header {
+
+        &__middle {
+            flex: 0 0 auto;
+            text-align: center;
+            justify-content: center;
+        }
+
+    }
+
+}
+
+
+//--------------------------------------------------------------
+// Customizer Layout Live Previewing
+//--------------------------------------------------------------
+
+
+[data-top-header="top-header-1"] {
+    .site-top-header__inner:not(.top-header-1) {
+        @include hide();
+        min-height: 0px;
+    }
+}
+
+[data-top-header="top-header-2"] {
+    .site-top-header__inner:not(.top-header-2) {
+        @include hide();
+        min-height: 0px;
+    }
+}
+
+[data-top-header="top-header-3"] {
+    .site-top-header__inner:not(.top-header-3) {
+        @include hide();
+        min-height: 0px;
+    }
+}

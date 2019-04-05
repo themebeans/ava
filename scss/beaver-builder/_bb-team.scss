@@ -1,0 +1,119 @@
+.bb--team {
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: calc( 100% + 2%);
+        margin-bottom: -2%;
+
+        @media only screen and (min-width: 600px) {  
+            width: calc( 100% + 3%);
+            margin-bottom: -3%;
+        }
+
+        @media only screen and (min-width: 1024px) {  
+            width: calc( 100% + 2.5%);
+            margin-bottom: -2.5%;
+        }
+
+    }
+
+    &--large &__inner {
+        @media only screen and (min-width: 1024px) {  
+            width: calc( 100% + 3%);
+            margin-bottom: -3%;
+        }
+    }
+
+    &__member {
+        position: relative;
+        margin-bottom: 2%;
+        margin-right: 2%;
+        @media only screen and (min-width: 600px) {  
+            margin-bottom: 3%;
+            margin-right: 3%;
+        }
+        @media only screen and (min-width: 1024px) {  
+            margin-bottom: 2.5%;
+            margin-right: 2.5%;
+        }
+    }
+
+    &--small &__member {
+        width: 31.33%;
+        @media only screen and (min-width: 600px) {  
+            width: 22%;
+        }
+        @media only screen and (min-width: 1024px) {  
+            width: 17.5%;
+        }
+    }
+
+    &--medium &__member {
+        width: 48%;
+        @media only screen and (min-width: 600px) {  
+            width: 30.33333%;
+        }
+        @media only screen and (min-width: 1024px) {  
+            width: 22.5%;
+        }
+    }
+
+    &--large &__member {
+        width: 48%;
+        @media only screen and (min-width: 600px) {  
+            width: 30.33333%;
+        }
+        @media only screen and (min-width: 1024px) {  
+            margin-bottom: 3%;
+            margin-right: 3%;
+        }
+    } 
+
+    &__image {
+        background-color: $lightgray;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: block;
+        height: 0;
+        padding-top: 135%;
+        width: 100%;
+    }
+
+    &__overlay {
+        display: none;
+
+        @media only screen and (min-width: 600px) {  
+            align-items: center;
+            background-color: #fff;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            left: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transition: opacity .2s ease;
+            width: 100%;
+        }
+
+
+        &:hover {
+            @media only screen and (min-width: 600px) {  
+                opacity: .9;
+            }
+        }
+
+        p.entry-title {
+            font-family: $font__main !important;
+            font-size: 12px !important;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            margin: 0;
+        }
+    }
+}

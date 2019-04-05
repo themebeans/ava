@@ -1,0 +1,118 @@
+.bb--hero {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    
+    &--fullscreen &__inner {
+        height: inherit;
+    }
+    
+    &--tall &__inner {
+        @media screen and (min-width: 769px) {
+            height: 70vh;
+        }
+    } 
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 190px 20px;
+        min-height: 300px;
+
+        div {
+            z-index: 99999;
+            text-align: center;
+            margin: 0 auto;
+            width: 90%;
+        }
+    } 
+
+    &__scrim {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    h1 {
+        margin: 0;
+        line-height: 1.5;
+        @media screen and (max-width: 1920px) and (min-width: 769px) {
+            font-size: 5vw;
+        }
+        @media screen and (min-width: 1920px) {
+            font-size: 95px;
+        }
+    }
+
+    &__content {
+        line-height: 1.6;
+        margin: 20px auto 0!important;
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: 600px) {
+            width: 70%; 
+            max-width: 860px;
+        }
+    }
+
+    &__image {
+        background-color: $lightgray;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .with-video {
+        @media screen and (min-width: 769px) {
+            opacity: 0;
+        }
+    }
+    
+    img,
+    &__video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover; 
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+
+    &__video {
+        z-index: 1;
+        animation: fadeIn 600ms;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+        animation-delay: 600ms;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+
+    &__btn {
+        margin-top: 45px;
+
+        @media screen and (max-width: 768px) {
+            padding: 1.33em 2.5em 1.27em;
+        }
+    }
+}
+

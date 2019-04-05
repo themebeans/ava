@@ -1,0 +1,92 @@
+/*
+Theme Name: Ava
+Description: Used to style the TinyMCE editor.
+*/
+
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Import
+ * 2.0 - Body
+ * 3.0 - RTL
+ * 4.0 - Media Queries
+ * 5.0 - Media Queries
+ */
+
+
+/**
+ * 1.0 Import
+ */
+
+
+@import url( '../../style.min.css' );
+
+
+/**
+ * 2.0 Body
+ */
+
+
+body.wp-autoresize {
+    margin: 15px auto;
+    padding: 0 20px !important;
+    opacity: 1;
+    vertical-align: baseline;
+    -webkit-font-smoothing: auto !important;
+}
+
+
+/**
+ * 3.0 RTL
+ */
+
+
+body.rtl {
+    font-family: Arial, Tahoma, sans-serif;
+}
+
+.rtl ul,
+.rtl ol {
+    margin: 0 20px 28px 0;
+}
+
+.rtl ol {
+    margin-right: 24px;
+    margin-left: 0;
+}
+
+.rtl table th,
+.rtl table caption {
+    text-align: right;
+}
+
+
+/**
+ * 5.0 Media Queries
+ */
+
+@media only screen and (max-width: 880px) {
+    blockquote {
+        margin-left: 0 !important;
+        margin-right:0 !important;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    body {
+        margin: 15px;
+    }
+
+    body,
+    img,
+    .wp-caption {
+        max-width: 100%;
+    }
+
+    img,
+    .wp-caption {
+        width: auto !important;
+    }
+
+}

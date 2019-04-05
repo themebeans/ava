@@ -1,0 +1,34 @@
+.page-navigation {
+	text-align: center;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media only screen and (min-width: 700px) {
+		margin-top: 40px;
+	}
+
+	.page-numbers {
+		padding: 5px 13px;
+		display: inline-block;
+		border-radius: 3px;
+		min-width: 36px;
+		background: $black;
+		color: #fff;
+		font-size: 12px;
+		font-family: $font__main;
+		text-align: center;
+		letter-spacing: .15em;
+		text-transform: uppercase;
+	}
+
+	.page-numbers:hover {
+		color: #fff !important;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.page-numbers:not(.prev):not(.next) {
+			display: none;
+		}
+	}
+}

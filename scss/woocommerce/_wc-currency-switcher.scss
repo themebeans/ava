@@ -1,0 +1,63 @@
+.site  {
+
+	.widget-woocommerce-currency-switcher .dd-select,
+	.widget-woocommerce-currency-switcher .dd-option-selected {
+		background: transparent !important;
+	}
+
+	.widget-woocommerce-currency-switcher .dd-container, .widget-woocommerce-currency-switcher .dd-container .dd-select, .woocommerce-currency-switcher-form ul.dd-options {
+		width: 110px !important;
+	}
+	
+	.woocommerce-currency-switcher-form {
+	
+		.dd-select {
+			border-radius: 4px;
+			padding: 7px 0;
+		}
+
+		.dd-options {
+			border-radius: 4px;
+			border-top: solid 1px #ccc !important;
+			margin-top: 2px;
+		}
+
+		.dd-option {
+			padding: 6px 0 6px 9px !important;
+		}
+
+		.dd-option-text {
+			line-height: initial !important;
+			position: relative;
+			top: .14em;
+		}
+	
+		.dd-option-text,
+		.dd-selected {
+			font-weight: normal;	
+			font-size: 12px;
+		}
+
+		.dd-option-image,
+		.dd-selected-image {
+			margin: 0 !important;
+			position: relative;
+			top: 0;
+			right: 10px;
+			border-radius: 2px;
+		}	
+		
+		label.dd-selected-text {
+			line-height: initial !important;
+			position: relative;
+			top: .09em;
+		}
+
+		.dd-pointer-down {
+			right: 8px !important;
+			margin-top: -3px !important;
+			border: solid 3px transparent !important;
+			border-top: solid 4px #000 !important;
+		}
+	}
+}

@@ -1,0 +1,135 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    background: #fbfbfb;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    display: block;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal !important;
+    margin: 0 0 10px;
+    outline: none;
+    padding: .7em 1.1em;
+    transition: all 50ms cubic-bezier(0.33,0,0.2,1);
+    vertical-align: baseline;
+    width: 100%;
+    -webkit-appearance: none;
+
+    &:hover {
+        border-color: rgba(0,0,0,.15);
+    }
+
+	&:focus {
+        color: $black;
+        border-color: rgba(0,0,0,.35);
+	}
+}
+
+::-webkit-input-placeholder {
+    color: rgba(0,0,0,.35);
+}
+:-moz-placeholder {
+    color: rgba(0,0,0,.35); 
+}
+::-moz-placeholder {
+    color: rgba(0,0,0,.35); 
+}
+:-ms-input-placeholder {
+    color: rgba(0,0,0,.35); 
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fbfbfb inset !important;
+}
+
+select {
+	border: 1px solid $color__border-input;
+}
+
+textarea {
+    display: block;
+    height: 150px;
+    line-height: 160%;
+    overflow: auto;
+    resize: vertical;
+    padding: 0.7em 0.9em;
+    vertical-align: top;
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    font-family: $font__main;
+
+    &.error {
+        display: none!important;
+    }
+
+    & .required {
+        color: #ff7373;
+    }
+}
+
+label
+input.error,
+textarea.error,
+.wpcf7-not-valid,
+.requiredField.error {
+    background-color: #fff;
+    border-color: #ff7373 !important;
+}
+
+.mc4wp-form-fields p {
+    position: relative;
+}
+
+.mc4wp-form-fields {
+    text-align: center;
+
+    .widget & p {
+        margin-bottom: 30px;
+    }
+
+    input[type="email"] {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        vertical-align: top;
+        margin: 0 auto 5px;
+        @media only screen and (min-width: 600px) {
+            display: inline-block;
+            max-width: 300px;
+            min-width: inherit;
+            margin: inherit;
+        }
+    }
+
+    input[type="submit"] {
+        display: block;
+        max-width: 300px;
+        vertical-align: top;
+        margin: 0 auto;
+        width: 100%;
+        @media only screen and (min-width: 600px) {
+            display: inline-block;
+            width: auto;
+            margin: inherit;
+        }
+    }
+}

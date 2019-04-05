@@ -1,0 +1,113 @@
+.flex-control-nav {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%,0);
+	z-index: 9999;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.flex-control-nav li {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.product-images--line {
+
+
+.flex-control-nav li a {
+  width: 14px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  margin: 0 3px;
+  white-space: nowrap;
+  transition: all .45s ease;
+  background: transparent;
+  cursor: pointer;
+  text-indent: -99999em;
+
+  &::after {
+	content: ' ';
+  	height: 2px;
+  	width: 100%;
+    opacity: .25;
+  	position: absolute;
+  	top: 6px;
+  	transition: all .45s ease;
+	background: $black;
+  	display: block !important;
+  }
+
+}
+
+.flex-control-nav a.flex-active {
+	width: 36px;
+}
+
+.flex-control-nav a.flex-active::after {
+    opacity: 1;
+    width: 36px;
+    cursor: default;
+}
+
+}
+
+.product-images--dots {
+
+    .flex-control-nav a {
+        width: 8px;
+        height: 8px;
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+        margin: 0 5px;
+        white-space: nowrap;
+        background-color: $black;
+        transition: all .45s ease;
+        opacity: .25;
+        cursor: pointer;
+    }
+
+    .flex-control-nav a.flex-active {
+        opacity: 1;
+        width: 8px;
+        cursor: default;
+    }
+}
+
+.product-images--circles {
+
+    .flex-control-nav {
+        bottom: 7px;
+    }
+
+    .flex-control-nav a {
+        display: inline-block;
+        box-shadow: inset 0 0 0 2px white;
+        width: 12px;
+        height: 12px;
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+        margin: 0 4px;
+        background: transparent;
+        overflow: visible !important;
+        text-indent: -999em;
+        white-space: nowrap;
+        transition: all .7s ease;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .flex-control-nav a.flex-active {
+        box-shadow: inset 0 0 0 8px white;
+    }
+}

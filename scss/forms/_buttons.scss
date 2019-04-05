@@ -1,0 +1,53 @@
+.btn,
+.single_add_to_cart_button,
+.button a,
+.checkout-button,
+.btn[type="submit"],
+.button[type="submit"],
+input[type="reset"],
+input[type="submit"] {
+    border-radius: 0;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .15em;
+    line-height: 1;
+    outline: none;
+    padding: 1.2em 2em 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 200ms cubic-bezier(0.33,0,0.2,1), color 200ms cubic-bezier(0.33,0,0.2,1), border-color 200ms cubic-bezier(0.33,0,0.2,1);
+    width: auto;
+    
+    &:hover,
+    &:focus {
+        color: #fff;
+    }
+
+    &#place_order,
+    &.checkout-button,
+    &.btn--large {
+        padding: 25px 46px;
+    }
+
+    &.btn--white {
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            background: #fff;
+            color: $black;
+        }
+    }
+}
+
+a ~ .button {
+    padding: 0;
+}
+
+.button + .button {
+    margin-left: 15px;
+}

@@ -1,0 +1,42 @@
+.error404 {
+    background: #111;
+
+    .site {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .site-content {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    h2.page-title {
+        color: #fff !important;
+        margin-bottom: 10px;
+    }
+
+    .content-area {
+        color: #fff !important;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+
+        p {
+            opacity: .75;
+        }
+
+        a {
+            color: #fff;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

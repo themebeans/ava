@@ -1,0 +1,81 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $black;
+    font-size: 17px;
+    font-family: $font__main;
+    line-height: 1.7;
+    @include font-smoothing();
+}
+
+.wp-autoresize,
+.author-description,
+.project-meta,
+.post .entry-content,
+.portfolio .entry-content,
+.fl-accordion-button-label
+.single-product-description,
+body:not(.single-product):not(.woocommerce-checkout) .single-page p {
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}
+    
+@import "headings";
+
+@import "copy";
+
+.onsale,
+label,
+body .single_add_to_cart_button,
+.woocommerce-checkout-review-order,
+.btn, .btn[type=submit], .button a, .button[type=submit], .checkout-button, input[type=reset], input[type=submit],
+body .quantity__title,
+.post .entry-meta,
+body .site-title-banner,
+body .site-title-banner .back-to-shop,
+body .product-navigation-wrapper,
+.product-details__bottom,
+.shop-minibar__filter-trigger,
+.woocommerce-ordering__sort-by,
+body.woocommerce-checkout .site-content label,
+body .entry-summary .variations label,
+body .dk-selected,
+.comment-form-rating label, .comment-form-rating p,
+table.mp-table thead th,
+body.single-product #comments .meta,
+body .product-categories li a,
+.orderby .dk-select-options .dk-option {
+    font-family: $font__main !important;
+}
+
+.text--small {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+#main .su-tabs-pane, 
+#main .su-tabs-nav span {
+    @include font-size(18px);
+}
+
+#main .su-tabs-pane {
+    color: $black;
+}
+
+#main .su-tabs-nav span {
+    color: $black;
+}
+
+@media screen and (max-width: 768px) {
+    #main .su-tabs-nav span {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,142 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: #dedede;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+    vertical-align: middle;
+}
+
+@import "tables";
+
+.sr .fooReveal { 
+    visibility: hidden; /* Ensure elements load hidden before ScrollReveal runs */
+}
+      
+.hidden {
+    display: none !important;
+}
+
+.flex__center {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.flex__justify_end {
+    justify-content: flex-end;
+}
+
+.flex__justify_center {
+    justify-content: center;
+}
+
+.align__left {
+    text-align: left !important;
+}
+
+.align__center {
+    text-align: center !important;
+}
+
+.align__right {
+    text-align: right !important;
+}
+
+.align__justify {
+    text-align: justify !important;
+}
+
+.style__italic {
+    font-style: italic;
+}
+
+.style__bold {
+    font-weight: bold;
+}
+
+.style__bold-italic {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.transform__uppercase {
+    text-transform: uppercase;
+}
+
+.transform__lowercase {
+    text-transform: lowercase;
+}
+
+.transform__capitalize {
+    text-transform: capitalize;
+}
+
+.svg__wrapper {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+    a, div, svg, button {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    a:after {
+        display: none !important;
+    }
+
+    svg {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+#sprite {
+    @include hide;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}

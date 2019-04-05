@@ -1,0 +1,277 @@
+.comments-area {
+    font-family: $font__serif;
+    line-height: 1.7;
+    font-size: 17px;
+    max-width: 38em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    text-align: left;
+    @media only screen and (min-width: 900px) {
+        margin-top: 60px;
+    }
+}
+
+.comments {
+
+    ol, ul, li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0; 
+    }
+
+    .comment-list > li:last-child .comment-body p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &-title {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.comment {
+    margin: 0 0 25px !important;
+    
+    .avatar {
+        border-radius: 100px;
+        float: left;
+        width: 30px;
+        height: 30px;
+        margin: 8px 10px 0 0 !important;
+        @media only screen and (min-width: 514px) {
+            width: 36px;
+            height: 36px;
+            margin: 7px 14px 0 0 !important;
+        }
+    }
+
+    &-author {
+        margin-bottom: -5px;
+
+        span, cite {
+            font-size: 16px;
+            font-family: $font__main;
+            display: inline-block;
+            font-style: normal;
+            font-weight: normal;
+            @media only screen and (min-width: 514px) {
+                font-size: 18px; 
+            }
+        }
+    }
+
+    &-meta {
+        display: block;
+        color: rgba(0, 0, 0, 0.5);
+        font-family: $font__main;
+        font-style: normal;
+        font-size: 13px;
+        margin: 0 0 5px;
+        @media only screen and (min-width: 514px) {
+            font-size: 16px; 
+        }
+
+        a {
+            color: rgba(0, 0, 0, 0.5);
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+
+    &-notes {
+        display: none;
+    }
+
+    &-content a {
+        word-wrap: break-word;
+    }
+
+    .moderation {
+        @include hide();
+    }
+
+    &-body {
+        clear: both;
+        @include font-smoothing;
+        @media only screen and (min-width: 514px) {
+            margin: 0 0 0 50px;      
+        }
+        
+        p {
+            margin-bottom: 0;
+            @media screen and (max-width: 768px) {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+        }
+
+        .pingback & {
+            margin-left: 0;
+        }
+    }
+}
+
+.children {
+    margin: 0;
+    padding: 0;
+
+    @media only screen and (min-width: 600px) {
+        .comments & {
+            margin: 0 0 0 50px;
+        }
+    }
+}
+
+.logged-in-as, .single-post .comment-reply-title, .page .comment-reply-title, #cancel-comment-reply-link {
+   @include hide();
+}
+
+.pinglist {
+    float: left;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+.page .comment-form {
+    margin-bottom: 50px;
+}
+
+.single-post .comment-form {
+    margin-bottom: -110px;
+    overflow: hidden;
+    transition: margin 200ms cubic-bezier(0.75, 0, 0.25, 1) 50ms;
+    @media only screen and (min-width: 769px) {
+        margin-bottom: -55px;
+    }
+    
+
+    & label {
+        @include hide();
+    }
+
+    &.js--focus {
+        margin-bottom: 70px;
+        transition: margin 200ms cubic-bezier(0.75, 0, 0.25, 1) 50ms; 
+    }
+
+    p {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .comment-form-url {
+        display: none;
+    }
+}
+
+.comment .comment-form {
+    @media only screen and (min-width: 769px) {
+        margin: 0 0 0 50px;
+    }
+}
+
+.single-post.is-customize-preview .comment-form,
+.single-post.admin-bar .comment-form {
+    margin-bottom: -10px;
+
+    &.js--focus {
+        margin-bottom: 50px;
+    }
+}
+
+
+body:not(.single-product) .comment-form-comment, body:not(.single-product) .comment-form-author, body:not(.single-product) .comment-form-email {
+
+    input,
+    textarea {
+        font-family: $font__serif;
+        font-size: 17px;
+        margin: 0;
+        @include font-smoothing;
+    }
+    
+    input {
+        padding: 0.6em 1em;
+    }
+
+    textarea {
+        line-height: 1.7 !important;
+    }
+}
+
+.form-submit {
+    text-align: left;
+    margin-bottom: 0 !important;
+    clear: left;
+
+	& input {
+		margin-top: -1px;
+	}
+
+    @media (max-width: 768px) {
+        & input {
+            width: 100%;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 769px) {
+    .comment-form-author, .comment-form-email {
+        float: left;
+        display: inline-block;
+        width: calc( 50% - 5px);
+    }
+
+    .comment-form-author {
+        margin-right: 5px;
+    }
+
+    .comment-form-email {
+        margin-left: 5px;
+    }
+}
+
+.comment-form-comment {
+    textarea {
+        min-height: 180px;
+    }
+}
+
+.comment.depth-3,
+.comment.depth-4,
+.comment.depth-5,
+.comment.depth-6,
+.comment.depth-7 {
+    
+    p {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.single-post #respond {
+    @include clearfix;
+
+    .form-submit, .comment-form-author, .comment-form-email {
+        opacity: 0;
+        transition: opacity 200ms cubic-bezier(0.75, 0, 0.25, 1) 0ms;
+
+        &.js--focus {
+            opacity: 1;
+            transition: opacity 200ms cubic-bezier(0.75, 0, 0.25, 1) 100ms;
+        }
+    }
+
+    .comment & {
+        .form-submit, .comment-form-author, .comment-form-email {
+            opacity: 1;
+        }
+    }
+}

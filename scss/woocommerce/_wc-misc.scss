@@ -1,0 +1,37 @@
+.woocommerce-info {
+    text-align: center;
+}
+
+.woocommerce .return-to-shop,
+.woocommerce .cart-empty {
+    text-align: center;
+}
+
+.demo_store {
+    background-color: $black;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    @media only screen and (min-width: 600px) {
+        font-size: 15px
+    }
+}
+
+.woocommerce-cart .woocommerce-info {
+    display: none;
+}
+
+.archive .woocommerce-info {
+    margin-top: 50px;
+}
+
+.woochimp_checkout_checkbox {
+	display: none;
+}
+
+.woocommerce-terms-and-conditions {
+	padding-top: 5px;
+	padding-bottom: 10px;
+}

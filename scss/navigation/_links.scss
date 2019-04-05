@@ -1,0 +1,21 @@
+a {
+	color: $black;
+	text-decoration: none;
+	position: relative;
+	transition: opacity 200ms cubic-bezier(0.33, 0, 0.2, 1), color 200ms cubic-bezier(0.33, 0, 0.2, 1);
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $black;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
+	.fl-builder-content p & {
+		text-decoration: underline;
+	}
+}

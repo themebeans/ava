@@ -1,0 +1,266 @@
+
+.tax-product_cat,
+.tax-product_tag,
+.post-type-archive-product {
+
+    @media only screen and (min-width: 769px) {
+        .hfeed.product-grid {
+            float: right;
+            width: 100%;
+            transition: all 1s cubic-bezier(0.80, 0, 0.07, 1);
+
+            &.js--active {
+                margin-left: 50px;
+                width: 80%;
+            }
+        }
+        .product-sidebar {
+            width: 200px;
+            padding: 0;
+            margin-top: -5px;
+            float: left;
+            @media only screen and (min-width: 1300px) {
+                width: 200px;
+            }
+        }
+    }
+}
+
+.tax-product_cat,
+.tax-product_tag,
+.post-type-archive-product {
+
+    .product-sidebar {
+        @include font-size(15px);
+        padding: 20px 20px;
+        @media only screen and (max-width: 768px) {
+            border-top: 1px solid $color__border-bottom;
+        }
+
+        @media only screen and (min-width: 400px) {
+            padding: 20px 5vw;
+        }
+
+        @media only screen and (min-width: 769px) {
+            position: absolute;
+            padding-right: 0;
+            padding-bottom: 0;
+            padding-left: 55px;
+        }
+
+        .sticky-wrapper {
+            @media only screen and (max-width: 768px) {
+                height: auto !important;
+            }
+        }
+
+        .product-categories-trigger--text {
+            float: left;
+            width: 90%;
+            padding-right: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+        }
+
+        .product-categories-trigger--icon {
+            float: right;
+            width: 10%;
+            text-align: right;
+            box-sizing: border-box;
+
+            .svg__wrapper {
+                height: 10px;
+                width: 10px;
+            }
+
+            svg {
+                fill: $black;
+            }
+
+        }
+
+        .product-categories {
+
+            @media only screen and (max-width: 768px) {
+                padding: 0 0 5px;
+            }
+
+            @media only screen and (min-width: 769px) {
+                line-height: 1.9;
+            }
+
+            li {
+                @media only screen and (max-width: 768px) {
+                    border-bottom: 1px solid $color__border-bottom;
+                }
+
+                &.current-cat {
+
+                    & a {
+                        cursor: default;
+
+                        &::after {
+                            display: none !important;
+                        }
+                    }
+                }
+
+                a {
+                    backface-visibility: hidden;
+                    @media only screen and (max-width: 768px) {
+                        display: block;
+                        padding: 7px 0;
+                        width: 100%;
+                    }
+
+                    @media only screen and (max-width: 768px) {
+                        &::after {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            li:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        .widget_product_categories {
+
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
+
+            &.js--open {
+                display: block;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+.admin-bar .product-sidebar .widget_product_categories {
+    padding-top: 32px;
+}
+
+
+
+
+
+
+.product-categories-trigger {
+    display: none;
+    cursor: pointer;
+    font-size: 16px;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    text-align: left;
+    user-select: none;
+    width: 100%;
+    position: relative;
+    transition: opacity 200ms cubic-bezier(0.33,0,0.2,1);
+
+    @media only screen and (min-width: 600px) {
+        font-size: 17px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: block;
+    }
+
+    &:after {
+        backface-visibility: hidden;
+        border-bottom: 1px solid $black;
+        content: " ";
+        display: block;
+        height: 8px;
+        position: absolute;
+        top: 10px;
+        border-right: 1px solid $black;
+        right: 3px;
+        transform: rotate(45deg);
+        width: 8px;
+        z-index: 99;
+        transition: transform 200ms cubic-bezier(0.33,0,0.2,1), top 200ms cubic-bezier(0.33,0,0.2,1);
+    }
+
+    &.js--active:after {
+        top: 12px;
+        transform: rotate(-135deg);
+    }
+}
+
+.product-filter {
+
+    @media only screen and (max-width: 768px) {
+        position: relative !important;
+        top: inherit !important;
+    }
+
+    @media only screen and (min-width: 769px) {
+        overflow: hidden;
+        width: 100%!important;
+        position: absolute;
+        transform: translateX(-300px);
+        will-change: transform, opacity;
+        @include opacity(0);
+    }
+
+    .js--animating & {
+        @media only screen and (min-width: 769px) {
+            transition: all 1s cubic-bezier(0.80, 0, 0.07, 1);
+        }
+    }
+
+    .js--active & {
+        transition: all 1s cubic-bezier(0.80, 0, 0.07, 1);
+        @media only screen and (min-width: 769px) {
+            overflow: hidden;
+            transform: translateX(0);
+            @include opacity(1);
+        }
+    }
+
+    &--text {
+        display: none;
+        @media only screen and (min-width: 769px) {
+            display: block;
+        }
+    }
+}
+
+.js--active .product-categories li {
+    @media only screen and (min-width: 769px) {
+        animation-duration: .4s;
+        animation-fill-mode: both;
+        animation-iteration-count: once;
+        animation-name: root-menu-items-load;
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+        @for $i from 1 through 20 {
+            &:nth-of-type(#{$i}) {
+                animation-delay: #{$i * 0.125}s;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

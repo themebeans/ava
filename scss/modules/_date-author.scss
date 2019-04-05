@@ -1,0 +1,60 @@
+.date-author {
+    display: block;
+    position: relative;
+    width: 160px;
+    height: 90px;
+    font-family: $font__main;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 1024px) {
+        margin: 0;
+    }
+
+    
+    .date {
+        width: 90px;
+        height: 90px;
+        display: block;
+        border-radius: 50%;
+        background-color: $lightgray;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        p {
+            font-size: 12px;
+            line-height: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+            padding: 12px 0 0;
+
+            span {
+                display: block;
+                margin: 2px 0 0;
+            }
+
+            strong {
+                letter-spacing: -1px;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 36px;
+                line-height: 36px;
+                display: block;
+            }
+
+        }
+
+    }
+
+    img {
+        width: 90px;
+        height: 90px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+}    

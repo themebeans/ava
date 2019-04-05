@@ -1,0 +1,55 @@
+.author-info {
+    font-family: $font__serif;
+    line-height: 1.7;
+    font-size: 17px;
+    width: 100%;
+    padding: 45px 40px; 
+    margin: 50px auto 45px;
+    background-color: $lightgray;
+    text-align: center;
+    position: relative;
+
+    @media screen and (min-width: 600px) {
+        margin: 70px auto;
+        padding: 70px 60px; 
+    }
+
+    .author-avatar {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+        width: 60px;
+        height: 60px;
+        display: block;
+        overflow: hidden;
+        border-radius: 50%;
+    
+        @media screen and (min-width: 769px) {
+            width: 80px;
+            height: 80px;
+        }   
+
+        &:after {
+            display: none !important;
+        }
+    }
+
+    .author-name {
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+        }  
+    }
+
+    .author-description {
+        @media screen and (max-width: 768px) {
+           @include font-size(16px);
+           line-height: 1.6;
+        }
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}

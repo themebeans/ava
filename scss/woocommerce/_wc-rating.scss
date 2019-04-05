@@ -1,0 +1,271 @@
+
+/**
+ * _fonts.scss
+ * Custom WooCommerce fonts.
+ */
+@font-face {
+    font-family: 'star';
+    src: url('assets/fonts/star.eot');
+    src: url('assets/fonts/star.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/star.woff') format('woff'),
+        url('assets/fonts/star.ttf') format('truetype'),
+        url('assets/fonts/star.svg#star') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.woocommerce-attributes-trigger-wrapper,
+.woocommerce-reviews-trigger-wrapper {
+    border-top: 1px solid $color__border-bottom;
+    border-bottom: 1px solid $color__border-bottom;
+    padding: 40px 0;
+    position: relative;
+    cursor: pointer;
+    line-height: 1;
+    transition: border-color .2s ease .3s;
+
+    @media screen and (min-width: 900px) {
+        padding-bottom: 50px;
+        padding-top: 45px;
+    }
+
+    &.js-open {
+        border-bottom-color: transparent;
+        transition: border-color .3s ease;
+    }
+
+    h2 {
+        display: inline-block;
+        line-height: 1;
+        transition: color 200ms cubic-bezier(0.33,0,0.2,1);
+    }
+
+    .icon {
+        top: 2px;
+        float: right;
+        height: 27px;
+        width: 27px;
+        transition: color 200ms cubic-bezier(0.33,0,0.2,1), transform .3s ease, width .3s ease, top .3s ease;
+        @media screen and (min-width: 900px) {
+            top: 7px;
+        }
+    }
+
+    &.js-open .icon {
+        transform: rotate(45deg);
+        height: 29px;
+        width: 29px;
+        @media screen and (min-width: 900px) {
+            top: 5px;
+        }
+    }
+
+}
+
+.woocommerce-Reviews-title {
+    display: none;
+}
+
+.comment-form-rating {
+
+    label, p {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    .stars {
+        position: relative;
+        top: 5px;
+        margin-left: 10px;
+    }
+}
+
+#attributes,
+#reviews {
+    height: 0;
+    overflow: hidden;
+    transition: height 500ms ease;
+}
+
+.attributes__inner,
+.reviews__inner {
+    @include clearfix;
+}
+
+.reviews__inner_padding {
+    padding: 10px 0 0;
+    @include clearfix;
+}
+
+#attributes,
+#reviews {
+
+    .comment:last-child {
+        margin-bottom: 50px;
+    }
+
+    #comments, #review_form_wrapper {
+        @media screen and (min-width: 900px) {
+            float: left;
+            width: 40%;
+        }
+
+        .comment-reply-title {
+            margin-bottom: 40px;
+            display: none;
+        }
+
+        .comment-respond {
+
+            p {
+                margin-bottom: 10px;
+                position: relative;
+            }
+
+            .comment-form-comment,
+            .comment-form-author,
+            .comment-form-email {
+                label {
+                    @include hide();
+                }
+            }
+        }
+
+        .meta strong {
+            font-weight: normal;
+        }
+
+        .description {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        time {
+            opacity: 0.5;
+        }
+    }
+
+    #comments {
+        @media screen and (min-width: 900px) {
+            width: 60%;
+            padding-right: 8vw;
+        }
+    }
+
+}
+
+.woocommerce-review-link {
+    opacity: .5;
+    font-size: 11px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    display: none;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.single .woocommerce-product-rating {
+    margin: 0 0 35px;
+}
+
+
+.woocommerce-noreviews {
+    display: none;
+}
+
+/**
+ * Star ratings
+ */
+.star-rating {
+    top: 2px;
+    overflow: hidden;
+    position: relative;
+    height: 1em;
+    line-height: 1;
+    font-size: 13px;
+    width: 5.4em;
+    display: inline-block;
+    font-family: 'star';
+
+    &:before {
+        content: "\73\73\73\73\73";
+        top: 0;
+        left: 0;
+        position: absolute;
+        opacity: 1;
+    }
+
+    span {
+        overflow: hidden;
+        float: left;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding-top: 1.5em;
+    }
+
+    span:before {
+        content: "\53\53\53\53\53";
+        top: 0;
+        position: absolute;
+        left: 0;
+    }
+}
+
+p.stars {
+    a {
+        position: relative;
+        height: 1em;
+        width: 1em;
+        text-indent: -999em;
+        display: inline-block;
+        text-decoration: none;
+
+        &:before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1em;
+            height: 1em;
+            line-height: 1;
+            font-family: 'star';
+            content: "\73";
+            text-indent: 0;
+        }
+
+        &:hover {
+            ~ a:before {
+                content: "\73";
+            }
+        }
+    }
+
+    &:hover {
+        a {
+            &:before {
+                content: "\53";
+            }
+        }
+    }
+
+    &.selected {
+        a.active {
+            &:before {
+                content: "\53";
+            }
+
+            ~ a:before {
+                content: "\73";
+            }
+        }
+
+        a:not(.active) {
+            &:before {
+                content: "\53";
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.cd-headline i {
+    font-style: normal;
+    font-weight: normal;
+}
+
+@media (max-width: 601px) {
+    .cd-words-wrapper b {
+        display: none;
+    }
+
+    .cd-words-wrapper b:first-of-type {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 600px) {
+    .cd-words-wrapper {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        vertical-align: top;
+    }
+
+    .cd-words-wrapper::after {
+        background-color: $black;
+        bottom: auto;
+        content: "";
+        height: 80%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+    }
+
+    .cd-words-wrapper b {
+        display: inline-block;
+        font-weight: normal;
+        left: 0;
+        position: absolute;
+        top: 0;
+        white-space: nowrap;
+    }
+
+    .cd-words-wrapper b.is-visible {
+        position: relative;
+    }
+
+    .cd-headline .cd-words-wrapper.waiting::after {
+        animation: cd-pulse 0.7s infinite;
+    }
+
+    @keyframes cd-pulse {
+        0% {
+            opacity: 1;
+            transform: translateY(-50%) scale(1);
+        }
+        40% {
+            opacity: 0;
+            transform: translateY(-50%) scale(0.9);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-50%) scale(0);
+        }
+    }
+
+    .cd-headline b,
+    .cd-words-wrapper.selected::after {
+        visibility: hidden;
+    }
+
+    .cd-headline b.is-visible {
+        visibility: visible;
+    }
+
+    .cd-headline i {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .cd-headline i.in {
+        position: relative;
+        visibility: visible;
+    }
+
+    .no-js .cd-words-wrapper b {
+        opacity: 0;
+    }
+
+    .no-js .cd-words-wrapper b.is-visible {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 600px) {
+	.cd-words-wrapper.selected b,
+	.cd-words-wrapper.selected i {
+	    color: #fff !important;
+	}
+}

@@ -1,0 +1,44 @@
+.memberpressproduct-template,
+.single-memberpressproduct  {
+
+    .type-memberpressproduct {
+        max-width: 38em;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .entry-header  {
+            text-align: center;
+        }
+
+        .mepr_price, 
+        .mp_price_str {
+            text-align: center;
+        }
+
+        .mepr-form input.invalid, 
+        .mepr-form select.invalid, 
+        .mepr-form textarea.invalid, 
+        .mepr-form label.mepr-checkbox-field.invalid, 
+        .mepr-form div.mepr-checkboxes-field.invalid, 
+        .mepr-form div.mepr-radios-field.invalid {
+            border-width: 1px !important;
+            border-color: $red;
+            background-color: inherit !important; 
+        }
+
+        .cc-error {
+            font-size: 13px;
+        }
+
+        table.mp-table thead th {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        table.mp-table tfoot th {
+            text-transform: none;
+        }
+    }
+}

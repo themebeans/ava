@@ -1,0 +1,65 @@
+.portfolio--ethan {
+
+    @media screen and (max-width: 599px) { 
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .project {
+        display: inline-block;
+        line-height: 0;
+        margin-bottom: 5px;
+        position: relative;
+        text-align: left;
+        vertical-align: bottom;
+
+        &__link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+        
+        @media screen and (min-width: 600px) { 
+            margin: 0 1% 2%;
+        }
+        
+        .fl-builder-edit & {
+            visibility: inherit;
+        }
+
+        &__thumb {
+            width: 100%;
+
+            @media screen and (min-width: 400px) {
+                max-height: 100px;
+                width: auto; 
+            }
+
+            @media screen and (min-width: 600px) {
+                max-height: 200px;
+            }
+
+            @media screen and (min-width: 769px) {
+                max-height: 250px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                max-height: 350px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                max-height: 450px;
+            }
+
+            @media screen and (min-width: 2500px) {
+                max-height: 600px;
+            }
+        }
+    }
+    
+    .project__hover--scaled:hover .project__thumb {
+        transform: scale(1);
+    }
+}

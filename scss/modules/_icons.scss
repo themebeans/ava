@@ -1,0 +1,98 @@
+.icon {
+    display: inline-block;
+    fill: currentColor;
+    height: 1.25em;
+    position: relative;
+    top: -0.0015em;
+    vertical-align: middle;
+    width: 1.25em;
+
+    &--bag {
+        stroke: currentColor;
+        stroke-width: 2px;
+    }
+    
+    &--filled-bag,
+    &--approved-cart,
+    &--approved-basket {
+        stroke-width: 0;
+    }
+
+    &--play {
+        stroke-width: 2px;
+    }
+
+    &--sticky {
+        height: 3em;
+        width: 3em; 
+    }
+
+    &--404 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &--houzz {
+        transform: scale(1.28);
+    }
+}
+
+/*--------------------------------------------------------------
+## SVGs Fallbacks
+--------------------------------------------------------------*/
+.svg-fallback {
+    display: none;
+}
+
+.no-svg .svg-fallback {
+    display: inline-block;
+}
+
+.no-svg .dropdown-toggle .svg-fallback.icon-expand {
+    font-size: 16px;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 2.5em;
+    position: absolute;
+    top: 8px;
+    transform: rotate(180deg);
+}
+
+.no-svg .dropdown-toggle.toggled-on .svg-fallback.icon-expand {
+    transform: rotate(0);
+}
+
+.no-svg .dropdown-toggle .svg-fallback.icon-expand:before {
+    content: "\005E";
+    display: block;
+    height: 25px;
+    text-align: center;
+    width: 20px;
+}
+
+/* Social Menu fallbacks */
+
+.no-svg .social-navigation a {
+    background: transparent;
+    color: $black;
+    height: auto;
+    width: auto;
+}
+
+/* Show screen reader text in some cases */
+
+.no-svg .next.page-numbers .screen-reader-text,
+.no-svg .prev.page-numbers .screen-reader-text,
+.no-svg .social-navigation li a .screen-reader-text,
+.no-svg .search-submit .screen-reader-text {
+    clip: auto;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    height: auto;
+    position: relative !important;
+    width: auto;
+}

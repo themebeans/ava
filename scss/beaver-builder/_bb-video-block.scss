@@ -1,0 +1,99 @@
+.bb--video_block {
+    position: relative;
+    text-align: center;
+    min-height: 300px;
+
+    &--fullscreen &__inner {
+        height: inherit;
+    }
+
+    &__scrim {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    &__image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    &__inner {
+        min-height: 400px;
+        height: 45vh;
+        display: flex;
+        text-align: center;
+        z-index: 99;
+
+        @media screen and (min-width: 769px) {
+            min-height: 600px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            min-height: 700px;
+        }
+
+        div {
+            margin: auto;
+            text-align: center;  
+            z-index: 999;
+        }
+
+        h2 {
+            margin: 0!important;
+            line-height: 1.5;
+            font-size: 34px;
+
+            @media screen and (max-width: 1920px) and (min-width: 769px) {
+                font-size: 5vw;
+            }
+            @media screen and (min-width: 1920px) {
+                font-size: 95px;
+            }
+        }
+
+        .lightbox-link {
+            display: block;
+            margin: 20px 0 0 0 !important;
+
+            &:active svg {
+                animation: pulse 250ms;
+                animation-timing-function: ease-out;
+                animation-fill-mode: none;
+            }
+        }   
+        
+        .icon {
+            backface-visibility: hidden;
+            transform: rotate(0);
+            top: -2px;
+            margin-left: 4px;
+            height: 24px;
+            width: 24px;
+        }
+
+        a:hover {
+            opacity: .65;
+        }
+    }
+
+    .ie & .bb--video_block__inner div {
+       position: absolute;
+       width: 100%;
+       top: 50%;
+       transform: translatey(-50%);
+    }
+}

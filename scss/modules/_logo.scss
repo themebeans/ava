@@ -1,0 +1,30 @@
+.site-branding {
+    position: relative;
+}
+
+.site-logo-link {
+    font-weight: normal;
+    text-transform: uppercase;
+    display: inline;
+    font-size: 24px;
+    letter-spacing: 6px;
+    margin: 0;
+    position: relative;
+    top: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+    line-height: 0;
+
+    @media only screen and (min-width: 769px) {
+
+        [data-header="header-5"] & {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.custom-logo-link {
+    outline: none !important;
+}

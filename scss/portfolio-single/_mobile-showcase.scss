@@ -1,0 +1,168 @@
+.portfolio__single--mobile-showcase {
+    
+    & {
+        padding: 0 5vw;
+
+        @media screen and (min-width: 769px) {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    figure {
+        margin-bottom: 5vw;
+        
+        @media screen and (min-width: 400px) {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            margin-right: 5vw;
+            width: calc( 50% - 2.5vw );
+
+            &:nth-child(2n + 1) {
+                clear: both;
+            }
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: calc( 33.3333333% - 3.4vw );
+
+            &:nth-child(2n + 1),
+            &:nth-child(-n + 2),
+            &:nth-child(2n) {
+                clear: inherit;
+                margin-right: 5vw;
+                margin-bottom: 0;
+            }
+
+            &:nth-child(3n + 1) {
+                clear: both;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1499px) {
+            &:nth-child(4n) {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1500px) {
+            width: calc( 25% - 2.3vw ); 
+
+            &:nth-child(2n + 1),
+            &:nth-child(-n + 2),
+            &:nth-child(2n),
+            &:nth-child(3n + 2),
+            &:nth-child(-n + 3),
+            &:nth-child(3n) {
+                clear: inherit;
+                margin-right: 3vw;
+            }
+
+            &:nth-child(4n + 1) {
+                clear: both;
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .iphone {
+        padding: 22% 0;
+        border-radius: 14%/7%;
+        position: relative;
+        border: 2px solid;
+        text-align: center;
+        
+        @media screen and (min-width: 400px) {
+            padding: 11% 0;
+        }  
+
+        @media screen and (min-width: 1024px) {
+            padding: 7% 0;
+        }
+
+        @media screen and (min-width: 1500px) {
+            padding: 5% 0;
+        }
+    }
+
+    .android .camera, .ipad .camera, .iphone .camera, .android .home_button, .ipad .home_button, .iphone .home_button, .android .camera_and_speaker, .ipad .camera_and_speaker, .iphone .camera_and_speaker {
+        position: absolute;
+        height: 0;
+        left: 50%;
+    }
+
+    .iphone .camera_and_speaker:after {
+        content: '';
+        width: 25%;
+        padding-top: 25%;
+        position: absolute;
+        top: -10%;
+        left: -40%;
+        border-radius: 50%;
+    }
+
+    .android .home_button, .ipad .home_button, .iphone .home_button {
+        bottom: 0;
+        border-radius: 50%;
+    }
+
+    .iphone .camera_and_speaker {
+        display: block;
+        position: absolute;
+        top: 4.8%;
+        width: 18%;
+        padding-top: 3.5%;
+        margin-top: 0;
+        margin-left: -9%;
+        border-radius: 18px;
+    }
+
+    .iphone .home_button {
+        bottom: 2%;
+        margin-bottom: 0;
+        width: 14%;
+        padding-top: 14%;
+        margin-left: -7%;
+    }
+
+    .android .camera, .ipad .camera, .iphone .camera, .android .camera:after, .ipad .camera:after, .iphone .camera:after, .android .home_button, .ipad .home_button, .iphone .home_button, .android .home_button:after, .ipad .home_button:after, .iphone .home_button:after, .android .camera_and_speaker, .ipad .camera_and_speaker, .iphone .camera_and_speaker, .android .camera_and_speaker:after, .ipad .camera_and_speaker:after, .iphone .camera_and_speaker:after {
+        box-shadow: 0 0 0 2px $black inset;
+    }
+
+    .iphone .screen {
+        width: 90%;
+    }
+
+    .ipad .screen, .iphone .screen {
+        margin: 0 auto;
+        border: 2px solid;
+        box-sizing: border-box;
+    }
+
+    .ipad .screen img, .iphone .screen img {
+        width: 100%;
+        display: block;
+    }
+
+    .ipad, .iphone, .screen.ipad, .screen.iphone {
+        border-color: $black;
+    }
+
+    .ipad, .iphone {
+        color: $black;
+    }
+}

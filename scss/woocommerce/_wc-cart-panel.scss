@@ -1,0 +1,145 @@
+#minicart-panel .product_list_widget > li {
+	display: flex;
+	width: 100%;
+	min-height: 0;
+	margin: 0;
+	padding: 22px;
+	position: relative;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+	> div {
+		display: table-cell;
+	}
+
+	&:last-child {
+		margin-bottom: 54px;
+	}
+
+	h5 {
+		margin: 0;
+		width: 70%;
+		float: left;
+		font-size: 17px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+
+		a {
+			color: $black;
+		}
+	}
+
+	.product-thumbnail {
+		border-radius: 3px;
+		display: inline-block;
+		width: 56px;
+		height: 56px;
+		margin: 0;
+
+		a {
+			display: block;
+			background: $lightgray;
+		}
+
+		img {
+			border-radius: 3px;
+			position: static;
+			width: 100%;
+			max-width: 56px;
+			height: auto;
+		}
+	}
+
+	.product-details {
+		vertical-align: middle;
+		padding-left: 20px;
+		display: inline-block;
+		width: calc(100% - 54px);
+	}
+}
+
+.product_list_widget {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.product-details__bottom {
+	display: block;
+	font-size: 11px;
+	margin-top: 27px;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+
+	.remove {
+		margin-left: 15px;
+		opacity: 1;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	i {
+		font-style: normal;
+	}
+
+	.product-quantity {
+		display: inline-block;
+
+		select {
+			position: relative;
+		}
+	}
+}
+
+.quantity__title {
+	display: inline-block;
+	margin-right: 0.2em;
+	opacity: 0.5;
+
+}
+
+.ava-cart-panel-item-price {
+	top: -3px;
+	position: relative;
+	float: right;
+	width: 30%;
+	letter-spacing: 0.1em;
+	font-family: $font__mono;
+	font-size: 14px;
+	text-align: right;
+	font-weight: 400;
+}
+
+select.qty {
+	max-width: 40px;
+	  min-width: 40px;
+	background: #fbfbfb;
+	border: 1px solid rgba(0, 0, 0, 0.09);
+	border-radius: 2px;
+	position: relative;
+	padding: 3px 18px 1px 8px;
+	cursor: pointer;
+	appearance: none;
+	line-height: 1.8!important;
+	font-family: $font__mono;
+	font-size: 11px;
+	margin: 0;
+	outline: none;
+	background: url("assets/images/select.svg") no-repeat 90% 6px #fbfbfb;
+	background-size: 12px 12px;
+	transition: all 200ms cubic-bezier(0.33,0,0.2,1);
+
+	&:hover,
+	&:focus {
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+
+	.entry-summary & {
+		font-size: 11px;
+		padding: 9px 45px 7px 15px;
+	}
+}
+
+

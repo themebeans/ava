@@ -1,0 +1,36 @@
+table,
+th,
+td {
+    border: 1px solid #eee;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    line-height: 1.5;
+    margin: 0 0 1.5em;
+    table-layout: fixed; /* Prevents HTML tables from becoming too wide */
+    width: 100%;
+}
+
+caption,
+th,
+td {
+    font-weight: normal;
+    text-align: left;
+}
+
+th {
+    border-width: 0 1px 1px 0;
+    color: $black;
+}
+
+td {
+    border-width: 0 1px 1px 0;
+}
+
+th,
+td {
+    padding: 0.33em;
+}

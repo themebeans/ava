@@ -1,0 +1,186 @@
+.site-minibar {
+    height: 54px;
+    font-weight: 500;
+    line-height: 54px;
+    padding: 0;
+    z-index: 99997;
+    left: 0;
+    position: relative;
+    position: fixed;
+    bottom: 0;
+    transition: 200ms transform linear;
+    width: 100%;   
+    will-change: transform;
+
+    a:after {
+        display: none !important;
+    } 
+
+    .mceContentBody.wp-editor & {
+        display: none;
+    }
+
+    &--pinned {
+        transform: translateY(0%);
+    }
+
+    &--unpinned {
+        transform: translateY(100%);
+    }
+
+    &__inner {
+        background-color: #fff;    
+        box-shadow: 0 0 1px rgba(0,0,0,.25);
+        padding: 0 25px;
+        @include clearfix;
+    }
+
+    &__left {
+        float: left;
+
+        .svg__wrapper {
+            width: 25px;
+            height: 25px;
+            position: relative;
+            top: 6px;
+            transition: 150ms stroke, 150ms fill;
+            margin-right: 5px;
+        }
+
+        .svg__twitter-share {
+            width: 36px;
+            height: 28px;
+        }
+
+        .svg__facebook-share {
+            width: 33px;
+            height: 33px;
+            top: 12px;
+        }
+
+        .likes-wrapper {
+            display: inline-block;
+            position: relative;
+        
+            svg {
+                fill: transparent;
+                stroke: #ff0000;
+                stroke-width: 1.2;
+            }
+
+
+            p {
+                float: right;
+                position: relative;
+                opacity: .6;
+                margin: 0;
+                font-size: 13px;
+            }
+
+            &.liked .svg__wrapper {
+            
+                svg {
+                    stroke: #ff0000;
+                    fill: #ff0000;
+                    animation: scale-fade .3s;
+                }
+                
+            }
+
+        }
+
+        .social-wrapper {
+            display: inline-block;
+            margin-right: 3px;
+        }
+
+    }
+
+    &__right {
+        display: none;
+    
+        @media only screen and (min-width:200px) { 
+            border-left: 1px solid rgba(0, 0, 0, 0.125);
+            position: absolute;
+            display: block;
+            right: 0;
+            padding: 7px 17px;
+            line-height: 1.6; 
+            max-width: 50%;
+            transition: background-color 200ms cubic-bezier(0.33,0,0.2,1);
+        }
+
+        @media only screen and (min-width: 1024px) { 
+            max-width: 500px;
+        }
+
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            outline: none;
+
+            &:after {
+                display: none!important;
+            } 
+
+        }
+
+        .site-label {
+            color: $black;
+            font-size: 13px;
+            font-family: $font__main;
+            opacity: .65;
+        }
+
+        &:hover, 
+        &:focus {
+            background: $lightgray;
+        }
+
+        h5 {
+            font-family: $font__main;
+            font-size: 16px;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .post-thumbnail {
+            height: 54px;
+            width: 54px;
+            top: 0;
+            left: 0;
+            position: absolute;
+
+            img {
+                height: 54px;
+                width: 54px;
+            }
+
+            & + .site-minibar__right-content {
+                margin-left: 50px;
+            }
+
+        }
+        
+        &-content {
+            display: block;
+            vertical-align: middle;
+        }
+
+    }
+
+    &__progress {
+        background: $black;
+        opacity: .2;
+        height: 6px;
+        position: absolute;
+        top: -6px;
+        left: 0;
+    }
+
+}

@@ -1,0 +1,125 @@
+.single-post .post-navigation {
+    position: relative;
+}
+
+.single-post .post-navigation a {
+    color: $black !important;
+
+    &:after {
+        display: none !important;
+    }
+
+}
+
+.nav-arrow {
+    position: relative;
+}
+
+.nav-arrow::after {
+    border-bottom: 2px solid $black;
+    border-left: 2px solid $black;
+    content: " ";
+    display: block;
+    height: 12px;
+    left: 15px;
+    position: absolute;
+    top: 25px;
+    transform: rotate(45deg);
+    width: 12px;
+    backface-visibility: hidden;
+}
+
+.nav-next .nav-arrow::after {
+    border-left: 0;
+    border-right: 2px solid $black;
+    left: auto;
+    right: 35px;
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 960px) {
+    .single-post .post-navigation {
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-bottom: 4px;
+    }
+
+    .single-post .post-navigation .nav-links {
+        display: table;
+        width: 100%;
+    }
+
+    .single-post .post-navigation .nav-next,
+    .single-post .post-navigation .nav-previous {
+        display: table-cell;
+        height: auto;
+        left: auto;
+        position: relative;
+        top: auto;
+        transform: translatey(0);
+        vertical-align: middle;
+        width: 50%;
+    }
+
+    .single-post .post-navigation a {
+        display: block;
+        height: 66px;
+        padding: 20px 0;
+    }
+
+    .nav-next .nav-arrow::before {
+        left: auto;
+        margin-right: -11px;
+        right: 50%;
+    }
+
+    .nav-arrow::after {
+        left: 50%;
+        margin-left: -11px;
+        top: 7px;
+    }
+
+    .nav-next .nav-arrow::after {
+        margin-right: -11px;
+        right: 50%;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .single-post .post-navigation {
+        z-index: 1089;
+    }
+
+    .single-post .post-navigation a {
+        height: 60px;
+        left: 0;
+        position: fixed;
+        text-align: left;
+        top: 50%;
+        transform: translatey(-50%);
+        width: 40px;
+        transition: opacity 200ms cubic-bezier(0.33,0,0.2,1);
+
+        &:hover {
+            opacity: .5;
+        }
+
+    }
+
+    .nav-next a {
+        left: auto;
+        right: 0;
+        text-align: right;
+        outline: none;
+    }
+
+    .nav-arrow {
+        box-sizing: border-box;
+        font-size: 0;
+        height: 60px;
+        line-height: 1;
+        opacity: 1;
+        transition: 400ms transform cubic-bezier(0.68, -0.55, 0.265, 1.4);
+        width: 60px;
+        z-index: 1089;
+    }
+}

@@ -1,0 +1,151 @@
+
+.woocommerce-account:not(.logged-in) {
+    
+    .entry-title {
+        display: none;
+    }
+
+    .woocommerce {
+        
+        h2 {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+		#customer_login {
+			h2 {
+				margin-top: 0;
+			}
+		}
+
+		.u-column1, .u-column2 {
+			background: $lightgray !important;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 40px;
+
+			@media screen and (min-width: 1024px) {
+				width: 48%;
+				float: left;
+			}
+
+		}
+
+		.u-column1 {
+			margin-bottom: 5vw;
+			@media screen and (min-width: 1024px) {
+				margin-right: 2%;
+				margin-bottom: 0;
+			}
+		}
+
+		.u-column2 {
+			@media screen and (min-width: 1024px) {
+				margin-left: 2%;
+			}
+		}
+
+        .login, .register {
+            padding: 0;
+
+            label {
+            	display: inline;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: .15em;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+
+            .woocommerce-Button {
+                margin-bottom: 0;
+                margin-top: 10px;
+            }
+
+            p {
+                text-align: left !important;
+                max-width: none;
+                margin-bottom: 10px;
+            }
+
+			p:last-of-type {
+                margin-bottom: 0 !important;
+			}
+            .woocommerce-form__label-for-checkbox {
+            	margin-bottom: 0;
+            	text-align: right;
+                float: right;
+                margin-top: 16px;
+            }
+        }   
+
+        .register .woocommerce-Button {
+			margin-bottom: 10px;
+        }    
+    }
+
+    .woocommerce {
+        margin: 0 auto;
+    }
+
+    #site-footer {
+        display: none;
+    }
+}
+
+.woocommerce-account {
+    
+    .entry-title {
+        display: none;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    .woocommerce-MyAccount-navigation {
+        @media screen and (min-width: 1024px) {
+            width: 20%;
+            float: left;
+        }
+
+        ul, ol, li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-family: $font__main;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+    }
+
+    .woocommerce-MyAccount-content {
+        @media screen and (min-width: 1024px) {
+            width: 80%;
+            float: left;
+        }
+
+        .woocommerce-info {
+            text-align: left;
+        }
+
+        .woocommerce-Button {
+            margin-top: 10px;
+        }
+    }
+
+}

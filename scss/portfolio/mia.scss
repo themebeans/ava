@@ -1,0 +1,94 @@
+.portfolio--mia {
+    padding: 0 5vw;
+
+    .site-header--fixed & {
+        padding-top: 5vw
+    }
+
+    .project {
+        position: relative;
+        margin-top: 5vw;
+
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+
+        &:nth-child(2) {
+            @media only screen and (min-width: 400px) {
+                margin-top: 0;
+            }
+        }
+
+        &:nth-child(3n+1), &:nth-child(3n+2) {
+            @media only screen and (min-width: 400px) {
+                box-sizing: border-box;
+                width: calc(50% - 2.5vw);
+                float: left;
+                overflow: hidden;
+            }
+        }
+
+        &:nth-child(3n+3) {
+            .entry-title {
+                font-size: 5vw;
+            }
+        }
+
+        &:nth-child(3n+1) {
+            @media only screen and (min-width: 400px) {
+                margin-right: 2.5vw;
+            }
+        }
+
+        &:nth-child(3n+2) {
+            @media only screen and (min-width: 400px) {
+                margin-left: 2.5vw;
+            }
+        }
+
+        &:nth-child(3n+3) {
+            @media only screen and (min-width: 400px) {
+                border: none;
+                box-sizing: content-box;
+                clear: left;
+                float: left;
+                width: 100%;
+            }
+        }
+
+        .entry-title {
+        	color: #fff;
+        }
+
+        &__link {
+            bottom: 0;
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            right: 0;
+            text-decoration: none;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        &__intrinsic {
+            line-height: 0;
+            overflow: hidden;
+            padding-bottom: 100%;
+            position: relative;
+        }
+
+        &__thumb {
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+        }
+    }
+}

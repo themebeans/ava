@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------
+# Mobile Showcase
+--------------------------------------------------------------*/
+@import "mobile-showcase";
+
+
+.single-portfolio--1 {
+    padding-top: 5vw;
+    text-align: center;
+
+    .entry-title {
+        margin-bottom: 25px;
+    }
+
+    .entry-content {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5vw;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .project-meta {
+        margin-bottom: calc( 5vw + 50px );
+    }
+
+    .project-assets {
+
+        figure {
+            margin-bottom: 5vw;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    .project-caption {
+        margin-top: 15vw;
+        margin-bottom: 15vw;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 900px;
+
+        @include font-size(28px);
+        line-height: 1.6;
+
+        @media screen and (min-width: 600px) {
+            @include font-size(36px);
+        }
+
+    }
+
+    .project-taxonomy {
+    	font-family: Karla !important;
+	font-style: normal!important;
+	font-weight: normal!important;
+	text-transform: uppercase!important;
+	font-size: 12px!important;
+	letter-spacing: 2px!important;
+	text-decoration: none !important;
+	margin-left: 15px;
+
+	a {
+		text-decoration: none !important;
+	}
+    }
+}
+
+/* Navigation */
+
+.single-portfolio .navigation {
+	@include font-smoothing;
+	margin-bottom: 14vw;
+	margin-top: 12.3vw;
+
+	.nav-previous {
+		float: right;
+	}
+
+	.nav-next {
+		float: left;
+	}
+
+	.post-title {
+		font-family: $font__heading;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.single-portfolio .navigation {
+		margin-bottom: 5vw;
+		margin-top: 8vw;
+		text-align: center;
+	}
+}
+
+.single-portfolio .navigation a {
+	font-size: 40px;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 823px) {
+	.single-portfolio .navigation a {
+		font-size: 4.75vw;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.single-portfolio .navigation a {
+		font-size: 90px;
+	}
+}

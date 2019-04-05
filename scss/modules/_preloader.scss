@@ -1,0 +1,53 @@
+#loader {
+    position: fixed;
+    z-index: 100008;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    will-change: opacity, visibility; 
+    transition: opacity 400ms cubic-bezier(0.80, 0, 0.07, 1) 300ms, visibility 1ms linear 500ms;
+    
+    &.js--loaded {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 400ms cubic-bezier(0.80, 0, 0.07, 1) 300ms, visibility 1ms linear 500ms;
+    }
+
+    .bar {
+        display: none;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        will-change: width; 
+        transition: all 500ms cubic-bezier(0.80, 0, 0.07, 1);
+
+        &.js--loaded {
+            width: 100%;
+        }
+    }
+}
+
+#loader .loader_wrap {
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    margin: -1px 0 0 -140px;
+    width: 400px;
+}
+
+#loader .bar_wrap {
+    display: none;
+    position:relative;
+    width: 220px;
+    height: 2px;
+    border-radius: 10px;
+    display: block;
+    background-color: #f2f2f2;
+}

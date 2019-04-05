@@ -1,0 +1,310 @@
+.site-footer {
+    position: relative;
+    width: 100%;
+
+    &__inner {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    &__inner-col {
+        margin-top: 50px;
+        min-height: 1px;
+        &:first-child {
+            margin-top: 0;
+        }
+        @media only screen and (max-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+    
+    &__widgets {
+        @include clearfix();
+        @media only screen and (min-width: 769px) {
+            margin: 0 -20px;
+        }
+        @media only screen and (min-width: 2014px) {
+            margin: 0 -30px;
+        }
+    }
+
+    .widget {
+        @media only screen and (min-width: 769px) {
+            padding: 0 20px;
+        }
+        @media only screen and (min-width: 2014px) {
+            padding: 0 30px;
+        }
+        .widget_nav_menu a {
+            opacity: .5;
+        }
+    }
+
+    .widget .widget-title {
+        margin-bottom: 20px;
+    }
+    
+    .widget_nav_menu a {
+        line-height: 2;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    @media only screen and (max-width: 599px) {
+        .widget_nav_menu {
+            text-align: center;
+        }
+    }
+    
+    .mc4wp-form {
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .mc4wp-response {
+        margin-top: -3px;
+    }
+
+    .footer-4 .mc4wp-response .mc4wp-response {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .mc4wp-error {
+        font-size: 15px;
+        color: $red;
+    }
+}
+
+[data-footer="footer-1"] {
+
+    .site-footer__inner {
+
+        @media only screen and (min-width: 769px) {
+            &-col {
+                float: left;
+                position: relative;
+                margin-top: 50px;
+                width: 50%;
+
+                &.col-1,
+                &.col-2 {
+                    margin-top: 0;
+                }
+
+            }
+
+        }
+
+        @media only screen and (min-width: 1024px) {
+            &-col {
+                width: 25%;
+                margin-top: 0;
+            }
+
+        }        
+
+    }
+
+}
+
+[data-footer="footer-2"] {
+
+    .site-footer__inner {
+        
+        &-col {
+            position: relative;
+            margin-top: 50px;
+            
+            @media only screen and (min-width: 769px) {
+                float: left;
+                width: 33.333%;
+                margin-top: 0;
+            }
+
+            &.col-1 {
+                margin-top: 0;
+            }
+
+        }
+    }
+
+}
+
+[data-footer="footer-3"] {
+
+    .site-footer__inner {
+        
+        &-col {
+            position: relative;
+            margin-top: 50px;
+            
+            @media only screen and (min-width: 769px) {
+                float: left;
+                width: 50%;
+                margin-top: 0;
+            }
+
+            &.col-1 {
+                margin-top: 0;
+            }
+
+        }
+    }
+
+}
+
+[data-footer="footer-4"] {
+
+    .site-footer__inner {
+        
+        &-col {
+            position: relative;
+            margin-top: 50px;
+            
+            @media only screen and (min-width: 769px) {
+                float: left;
+                width: 100%;
+                margin-top: 0;
+            }
+
+            &.col-1 {
+                margin-top: 0;
+            }
+
+        }
+    }
+
+    // .site-footer__widgets {
+    //     .widget:last-of-type {
+    //         margin-bottom: 65px;
+    //     }
+    // }
+
+}
+
+[data-footer="footer-5"] {
+
+    .site-footer__inner {
+        
+        .site-footer__left {
+
+            @media only screen and (min-width: 769px) {
+                float: left;
+                width: 40%;
+                display: flex;
+                flex-grow: 1;
+                width: 52%;
+            }
+
+            @media only screen and (min-width: 1024px) {
+                width: 45%;
+            }
+            
+            &-col {
+                position: relative;
+                margin-top: 20px;
+                
+                @media only screen and (min-width: 769px) {
+                    flex: 1;
+                    margin-top: 0;
+                }
+
+                &.col-1 {
+                    margin-top: 0;
+                }
+
+            }  
+
+            .widget_nav_menu {
+                @media only screen and (max-width: 768px) {
+                    text-align: center;
+                }
+            }  
+
+        }
+
+        .site-footer__right {
+            margin-top: 50px;
+
+            @media only screen and (min-width: 769px) {
+                float: right;
+                margin-top: 5px;
+                width: 48%;
+            }
+
+            @media only screen and (min-width: 1024px) {
+                width: 50%;
+            }
+
+            @media only screen and (min-width: 1200px) {
+                width: 40%;
+            }
+
+            @media only screen and (min-width: 1500px) {
+                width: 30%;
+            }
+
+            &-col {
+                position: relative;
+            }
+            
+            .mc4wp-form {
+                @media only screen and (max-width: 768px) {
+                    text-align: center;
+                }
+            }
+
+            .mc4wp-form p.text {
+                @media only screen and (max-width: 599px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+//--------------------------------------------------------------
+// Customizer Layout Live Previewing
+//--------------------------------------------------------------
+
+[data-footer="footer-1"] {
+    .site-footer__inner:not(.footer-1) {
+        @include hide();
+    }
+}
+
+[data-footer="footer-2"] {
+    .site-footer__inner:not(.footer-2) {
+        @include hide();
+    }
+}
+
+[data-footer="footer-3"] {
+    .site-footer__inner:not(.footer-3) {
+        @include hide();
+    }
+}
+
+[data-footer="footer-4"] {
+    .site-footer__inner:not(.footer-4) {
+        @include hide();
+    }
+}
+
+[data-footer="footer-5"] {
+    .site-footer__inner:not(.footer-5) {
+        @include hide();
+    }
+}
+
+[data-footer="footer-6"] {
+    .site-footer__inner:not(.footer-6) {
+        @include hide();
+    }
+}

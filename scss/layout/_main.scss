@@ -1,0 +1,127 @@
+body.single-post .site-content .site-content__inner,
+body.single-download .site-content .site-content__inner {
+    padding-top: 0;
+}
+
+// body.blog .site-content .site-content__inner,
+body.tax-product_tag .site-content .site-content__inner,
+body.tax-product_cat .site-content .site-content__inner,
+body.post-type-archive-product .site-content .site-content__inner {
+    padding: 0;
+}
+
+.single-post .site-main__inner {
+    @include clearfix();
+
+    @media screen and (min-width: 961px) {
+        max-width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+.site-content {
+    position: relative;
+    @include clearfix;
+
+    &__inner {
+        margin: 0 auto;
+        @include clearfix;
+    }
+
+    .content-area {
+        @include clearfix();
+    }
+
+    .content-sidebar {
+        position: relative;
+        margin-top: 70px;
+        padding-top: 10px;
+        
+        @media only screen and (min-width: 961px) {
+            float: left;
+            margin-top: 0;
+            width: 230px;
+            margin-left: 95px;
+        }
+
+    }
+
+    // Left Sidebar Single Post Layout
+    [data-post-sidebar='left'].single:not(.single-elementor_library) & {
+
+        .content-area .post {
+
+            @media only screen and (min-width: 961px) {
+                float: right;
+                width: calc(100% - 325px);
+            }
+
+        }
+
+        .content-sidebar {
+
+            @media only screen and (min-width: 961px) {
+                float: left;
+                margin-left: 0;
+                margin-right: 95px;
+            }
+
+        }
+
+    } 
+
+    // Right Sidebar Single Post Layout
+    [data-post-sidebar='right'].single:not(.single-elementor_library) & {
+        
+        .content-area .post {
+
+            @media only screen and (min-width: 961px) {
+                float: left;
+                width: calc(100% - 325px);
+            }
+
+        }
+
+    } 
+
+    // No Sidebar Single Post Layout
+    [data-post-sidebar='none'].single & {
+        
+        .post .entry-excerpt {
+            @media only screen and (min-width: 600px) {
+                text-align: center;
+            }
+        }
+        
+        .site-main__inner,
+        .comments-area__inner {
+            margin: 0 auto;
+            max-width: 700px;
+        }
+    }
+}
+
+
+body.blog,
+body.search,
+body.archive {
+    .site-content {
+        &__inner {
+            padding-top: 0 !important;
+            @media only screen and (max-width: 768px) {
+                padding-top: 0 !important;
+            }
+        }
+    }
+}
+
+.site-main {
+    position: relative;
+    @include clearfix(); 
+}
+
+.content-sidebar {
+    @include clearfix();  
+}

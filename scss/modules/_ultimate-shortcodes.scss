@@ -1,0 +1,51 @@
+.su-button-style-default span {
+    border: none !important;
+    border-radius: 3px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    font-size: 16px !important;
+    -webkit-font-smoothing: auto;
+}
+
+.su-button {
+    &::after {
+        display: none !important;
+    }
+}
+
+.su-accordion .su-spoiler {
+    margin-bottom: .25em !important;
+}
+
+.su-spoiler-style-fancy {
+    border: none !important;
+}
+
+.su-spoiler-style-fancy > .su-spoiler-title {
+    border-radius: 3px 3px 0 0 !important;
+    font-weight: normal !important;
+    border: none !important;
+    -webkit-font-smoothing: auto;
+}
+.su-spoiler-style-fancy.su-spoiler-closed > .su-spoiler-title {
+    border-radius: 3px !important;
+}
+
+.su-spoiler-icon {
+    top: 13px !important;
+    font-size: 10px !important;
+}
+
+.su-spoiler-title {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+.su-spoiler-content {
+    border: 3px solid #f0f0f0 !important;
+    border-radius: 0 0 3px 3px !important;
+}
+
+.fl-editor-field .su-generator-button {
+    display: none !important;
+}

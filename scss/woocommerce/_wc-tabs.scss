@@ -1,0 +1,116 @@
+
+
+.wc-tab,
+.woocommerce-Reviews {
+    outline: none;
+}
+
+.wc-tab h2 {
+    display: none;
+}
+
+.woocommerce-tabs ul.tabs>li.active a:after, 
+.woocommerce-tabs ul.tabs>li:hover a:after {
+    height: 2px;
+    bottom: -1px;
+    background-color: #333;
+}
+
+.woocommerce-tabs ul.tabs>li a:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+
+.woocommerce-tabs table th, 
+.woocommerce-tabs table tr,
+.woocommerce-tabs table td {
+    border: 0;
+    padding: 0;
+}
+
+.woocommerce-tabs table {
+    border-collapse: collapse;
+    table-layout: auto;
+    font-size: 16px;
+    border: none;
+}
+
+.woocommerce-tabs table th {
+    vertical-align: middle;
+    text-align: left;
+    padding: 0 10px 0 0;
+    width: 1%;
+}
+
+.woocommerce-tabs table td {
+    width: 99%;
+}
+    
+.woocommerce-tabs table tr {
+    padding: 3px 0;
+    display: block;
+}
+
+.woocommerce-tabs ul.tabs {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #e5e5e5;
+    clear: both;
+    text-align: center;
+    @media screen and (min-width: 769px) {
+        text-align: left;
+    }
+}
+
+.woocommerce-tabs ul.tabs>li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: 769px) {
+        float: left;
+    }
+
+}
+
+.woocommerce-tabs ul.tabs>li a {
+    position: relative;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 14px 11px;
+    font-weight: 400;
+    color: #454545;
+}
+
+.woocommerce-tabs ul.tabs>li a:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: transparent;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+
+.woocommerce-tabs ul.tabs>li.active a, .woocommerce-tabs ul.tabs>li:hover a {
+    color: #333;
+}

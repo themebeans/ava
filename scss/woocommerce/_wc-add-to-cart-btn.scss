@@ -1,0 +1,47 @@
+.single_add_to_cart_button.button,
+.ava-variable-add-to-cart-button.button {
+    height: 60px;
+    line-height: 60px !important;
+    position: relative;
+    width: 200px !important;
+    overflow: hidden;
+    padding: 0;
+
+    em {
+        /* this is the button text message */
+        backface-visibility: hidden;
+        font-style: normal;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translateZ(0);
+        transition: transform 0.3s;
+        width: 100%;
+    }
+
+    svg {
+        /* this is the check icon */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        /* move the icon on the right - outside the button */
+        transform: translateX(50%) translateY(-50%);
+        transition: transform 0.3s;
+        width: 100%;
+    }
+
+    &.is-added em {
+        /* product added to the cart - hide text message on the left with no transition */
+        color: transparent;
+        transform: translateX(-100%);
+        transition: transform 0s;
+    }
+
+    &.is-added svg {
+        /* product added to the cart - move the svg back inside the button */
+        transform: translateX(-50%) translateY(-50%);
+        transition: transform 0s;
+    }
+}
+

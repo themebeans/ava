@@ -1,0 +1,235 @@
+.trigger-wrapper {
+
+    .svg__wrapper {
+        width: 24px;
+        height: 18px;
+        top: 2px;
+
+        @media only screen and (min-width: 769px) {
+            top: 3px;
+        }
+    }
+
+    .site-header__left & {
+        margin-right: 17px;
+    }
+
+    .site-header__right & {
+        margin-left: 17px;
+    }
+
+    [data-header-search="false"] .site-header__right & {
+        margin-left: 30px;
+    }
+
+    [data-header-search="false"] .site-header__left & {
+        margin-right: 25px;
+    }
+}
+
+.js--opennav {
+    height: 100%;
+    overflow: hidden;
+}
+
+.site-flyout {
+    background-color: #fff;
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 500ms cubic-bezier(0.75,0,0.25,1);
+    width: 100%;
+    will-change: transform;
+    z-index: 99998;
+    max-width: 900px; 
+
+    @media only screen and (min-width: 769px) {
+        margin-top: 0!important;
+        overflow-y: hidden;
+    }
+
+    [data-flyout='false'] & {
+        @media only screen and (min-width: 769px) {
+            display: none;
+        }
+    }
+
+    .admin-bar & {
+        top: 32px;
+        @media only screen and (max-width: 782px) {
+            top: 46px;
+        }
+    }
+
+    &.sidebar--right {
+        left: inherit;
+        right: 0;
+        transform: translatex(100%);
+    }   
+
+    @media only screen and (min-width: 500px) {
+        &.no-widget-area {
+            max-width: 500px;
+        }
+    }
+
+    .js--opennav & {
+        pointer-events: auto;
+        transform: translateX(0%);
+        transition: transform 500ms cubic-bezier(0.75,0,0.25,1);
+    }
+
+    .js--opennav &.sidebar--right {
+        margin-right: 0;
+        margin-left: inherit;
+    }  
+
+}
+
+.sidebar--section {
+    box-sizing: border-box;
+    display: block;
+    height: 100vh;
+    float: left;
+    padding: 50px 30px 50px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    z-index: 1110;
+
+    @media only screen and (min-width: 769px) {
+        padding: 12%;
+    }
+    
+    &.widget-area {
+        border-left: 1px solid #eee;
+    }
+
+    .no-widget-area  & {
+        width: 100%;
+    }
+
+    &.js--scroll {
+        overflow: scroll;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        &.widget-area {
+            display: none;
+        }
+    }
+
+    [data-flyout='false'] &.mobile-menu {
+        display: block;
+    }
+    
+    .social-wrapper {
+        margin-top: 50px;
+        padding-bottom: 75px;
+    }
+
+    .social-navigation {
+        @media only screen and (min-width: 769px) {
+            display: none;
+        }
+
+        a {
+            margin: 0;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .sidebar--section {
+        display: inline-block;
+        height: 100%;
+        padding-left: 60px;
+        padding-right: 60px;
+        vertical-align: middle;
+        display: table;
+        width: 50%;
+    }
+
+    .sidebar--section:nth-child(2) {
+        border-top: none;
+    }
+
+    .sidebar.no-widget-area .sidebar--section {
+        border-right: 0;
+        width: 100%;
+    }
+}
+
+.js--opennav .sidebar--section {
+    -webkit-overflow-scrolling: touch;
+}
+
+.sidebar--section-inner {
+    // position: relative;
+    display: block;
+    vertical-align: middle;
+    
+    @media only screen and (min-width: 769px) {
+        display: table-cell;
+    }
+
+}
+
+.js--scroll .sidebar--section-inner {
+    top: auto;
+}
+
+.js--opennav .sidebar--section-inner {
+    -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 599px) {
+    .admin-bar .sidebar--section-inner {
+        top: 46px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar--section-inner {
+        top: auto;
+    }
+}
+
+.nav-close-overlay {
+    background: rgba(0,0,0,0.15);
+    bottom: 0;
+    cursor: pointer;
+    display: block;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 400ms cubic-bezier(0.75,0,0.25,1) 100ms, visibility 1ms linear 502ms;
+    visibility: hidden;
+    will-change: opacity;
+    z-index: 99998;
+    
+    @media screen and (min-width: 769px) {
+        [data-flyout="false"] & {
+            display: none;
+        }
+    }
+
+    .js--opennav & {
+        opacity: 1;
+        transition: opacity 400ms cubic-bezier(0.75,0,0.25,1) 2ms, visibility 1ms linear;
+        visibility: visible;
+    }
+}
