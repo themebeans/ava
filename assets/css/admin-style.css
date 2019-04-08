@@ -1,0 +1,731 @@
+/**
+ * Customizer
+ */
+
+#sub-accordion-section-ava__style-header li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-top-header li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-mobilenav li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-shop li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-singleproduct li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-singlepost li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-portfolio li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-footer li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-colophon li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-flyout li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-fonts li:not(.customize-control-themebeans-title) .customize-control-title,
+#sub-accordion-section-ava__style-site li:not(.customize-control-themebeans-title) .customize-control-title {
+	font-weight: 500;
+}
+
+#customize-control-custom_logo_max_width .customize-control-title {
+	font-weight: 400 !important;
+}
+
+#customize-control-custom_logo_mobile_max_width .customize-control-title {
+	font-weight: 400 !important;
+}
+
+#customize-control-header_font,
+#customize-control-header_font_style,
+#customize-control-header_font_weight,
+#customize-control-header_font_transform,
+#customize-control-topheader_font,
+#customize-control-topheader_font_style,
+#customize-control-topheader_font_weight,
+#customize-control-topheader_font_transform,
+#customize-control-shop_font,
+#customize-control-shop_font_style,
+#customize-control-shop_font_weight,
+#customize-control-shop_font_transform,
+#customize-control-singleproduct_font,
+#customize-control-singleproduct_font_style,
+#customize-control-singleproduct_font_weight,
+#customize-control-singleproduct_font_transform,
+#customize-control-singleproduct_header_font,
+#customize-control-singleproduct_header_font_style,
+#customize-control-singleproduct_header_font_weight,
+#customize-control-singleproduct_header_font_transform,
+#customize-control-colophon_font,
+#customize-control-colophon_font_style,
+#customize-control-colophon_font_weight,
+#customize-control-colophon_font_transform,
+#customize-control-colophon_menu_font,
+#customize-control-colophon_menu_font_style,
+#customize-control-colophon_menu_font_weight,
+#customize-control-colophon_menu_font_transform,
+#customize-control-footer_font,
+#customize-control-footer_font_style,
+#customize-control-footer_font_weight,
+#customize-control-footer_font_transform,
+#customize-control-global_header_font,
+#customize-control-global_header_font_style,
+#customize-control-global_header_font_weight,
+#customize-control-global_header_font_transform,
+#customize-control-global_body_font,
+#customize-control-global_body_font_style,
+#customize-control-global_body_font_weight,
+#customize-control-global_body_font_transform {
+    margin-bottom: 0 !important;
+}
+
+#customize-control-header_font .customize-control-title,
+#customize-control-header_font_style .customize-control-title,
+#customize-control-header_font_weight .customize-control-title,
+#customize-control-header_font_transform .customize-control-title,
+#customize-control-topheader_font .customize-control-title,
+#customize-control-topheader_font_style .customize-control-title,
+#customize-control-topheader_font_weight .customize-control-title,
+#customize-control-topheader_font_transform .customize-control-title,
+#customize-control-shop_font .customize-control-title,
+#customize-control-shop_font_style .customize-control-title,
+#customize-control-shop_font_weight .customize-control-title,
+#customize-control-shop_font_transform .customize-control-title,
+#customize-control-singleproduct_font .customize-control-title,
+#customize-control-singleproduct_font_style .customize-control-title,
+#customize-control-singleproduct_font_weight .customize-control-title,
+#customize-control-singleproduct_font_transform .customize-control-title,
+#customize-control-singleproduct_header_font .customize-control-title,
+#customize-control-singleproduct_header_font_style .customize-control-title,
+#customize-control-singleproduct_header_font_weight .customize-control-title,
+#customize-control-singleproduct_header_font_transform .customize-control-title,
+#customize-control-colophon_font .customize-control-title,
+#customize-control-colophon_font_style .customize-control-title,
+#customize-control-colophon_font_weight .customize-control-title,
+#customize-control-colophon_font_transform .customize-control-title,
+#customize-control-colophon_menu_font .customize-control-title,
+#customize-control-colophon_menu_font_style .customize-control-title,
+#customize-control-colophon_menu_font_weight .customize-control-title,
+#customize-control-colophon_menu_font_transform .customize-control-title,
+#customize-control-footer_font .customize-control-title,
+#customize-control-footer_font_style .customize-control-title,
+#customize-control-footer_font_weight .customize-control-title,
+#customize-control-footer_font_transform .customize-control-title,
+#customize-control-global_header_font .customize-control-title,
+#customize-control-global_header_font_style .customize-control-title,
+#customize-control-global_header_font_weight .customize-control-title,
+#customize-control-global_header_font_transform .customize-control-title,
+#customize-control-global_body_font .customize-control-title,
+#customize-control-global_body_font_style .customize-control-title,
+#customize-control-global_body_font_weight .customize-control-title,
+#customize-control-global_body_font_transform .customize-control-title {
+	top: 0!important;
+}
+
+.wp-customizer .wp-full-overlay, .customize-panel-back, .customize-section-back, .customize-section-title, #customize-theme-controls .accordion-section-title, #customize-controls .customize-info .accordion-section-title {
+	font-weight: normal;
+}
+
+@media screen and (max-width: 782px) {
+    input[type=number] {
+        height: inherit;
+    }
+    input, textarea {
+        font-size: inherit;
+    }
+}
+
+.wp-full-overlay-sidebar{
+	box-shadow: 0px 0px 0 0px !important;
+}
+
+
+
+.cei-import-file {
+    background-color: #e2e2e2;
+}
+
+.customize-controls-close {
+    height: 45px;
+}
+.customize-controls-close:before {
+    top: 1px;
+    left: 11px;
+}
+
+.wp-full-overlay,
+.customize-panel-back,
+.customize-section-back,
+.customize-section-title,
+#customize-theme-controls .accordion-section-title,
+#customize-controls .customize-info .accordion-section-title {
+    background: #eee!important;
+    font-weight: 500;
+}
+
+#customize-theme-controls .customize-pane-child.accordion-section-content, #customize-theme-controls .customize-pane-child.accordion-sub-container {
+    height: 100%;
+}
+
+
+#accordion-section-themes+.control-section,
+#customize-theme-controls .control-panel-content .control-section:nth-child(2) {
+    border: none;
+}
+
+#customize-theme-controls .control-section-themes .accordion-section-title {
+    /*border-bottom-color: transparent;*/
+}
+#accordion-section-themes {
+    margin: -15px 0 -10px;
+}
+
+#customize-theme-controls .customize-pane-child.accordion-sub-container .customize-info {
+    margin-bottom: -1px;
+}
+
+@media screen and (max-width: 782px) {
+    .customize-control-checkbox input[type=checkbox]:checked:before {
+        margin: -3px 0 0 -6px !important;
+    }
+}
+
+#customize-theme-controls .customize-pane-child.menu li {
+    position: relative;
+}
+
+.customize-controls-close {
+    background: transparent !important;
+}
+
+.expanded .wp-full-overlay-main {
+    box-shadow: 0 0 25px rgba(0,0,0,.11), 0 0 0 1px rgba(0,0,0,.025);
+}
+
+.expanded:not(.preview-mobile) .wp-full-overlay-main {
+    top: 22px;
+    bottom: 22px;
+    height: calc(100% - 44px);
+}
+
+.expanded:not(.preview-mobile):not(.preview-tablet) .wp-full-overlay-main {
+    right: auto;
+    width: calc(100% - 44px);
+    left: 22px;
+}
+
+.customize-controls-close,
+.customize-panel-back,
+.customize-section-back,
+.expanded .wp-full-overlay-footer,
+#customize-theme-controls .accordion-section-title {
+    border: none;
+}
+
+.customize-control-title {
+    margin-bottom: 10px;
+}
+
+#customize-footer-actions {
+    border-right: 1px solid #ddd;
+}
+
+.customize-control-textarea .customize-control-title {
+     font-weight: normal;
+}
+
+#customize-control-colophon_copyright_text {
+    margin-bottom: 5px;
+}
+
+#customize-control-blogname {
+    margin-top: 20px;
+}
+
+#customize-control-light_site_logo {
+    margin-bottom: -10px;
+}
+
+#customize-control-custom_logo {
+    margin-bottom: 20px;
+}
+
+#customize-control-ava__title-header .customize-control-description {
+    display: none;
+}
+
+/* 50/50, Small text input fields */
+#customize-control-typekit_id,
+#customize-control-typekit_font_1,
+#customize-control-typekit_font_2,
+#customize-control-shop_salebadge_text {
+	position: relative;
+	margin-bottom: 6px
+}
+
+#customize-control-typekit_id .customize-control-title,
+#customize-control-typekit_font_1 .customize-control-title,
+#customize-control-typekit_font_2 .customize-control-title,
+#customize-control-shop_salebadge_text  .customize-control-title {
+    font-weight: normal;
+    width: 50%;
+    margin-bottom: 0;
+    position: relative;
+    top: 4px;
+}
+
+#customize-control-typekit_id input,
+#customize-control-typekit_font_1 input,
+#customize-control-typekit_font_2 input,
+#customize-control-shop_salebadge_text input {
+    width: 50%;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    margin: 0;
+    border-radius: 5px;
+    -webkit-font-smoothing: antialiased;
+}
+
+#customize-control-shop_salebadge_size {
+	margin-top: 4px;
+}
+
+/* Customizer Select */
+
+#customize-theme-controls li.customize-control-select {
+    position: relative;
+}
+
+#customize-theme-controls li.customize-control-select .customize-control-title {
+    width: 50%;
+    margin-bottom: 0;
+}
+
+#customize-theme-controls li.customize-control-select select {
+    width: 50%;
+    position: absolute;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    top: 0px;
+    right: 0;
+    margin: 0;
+    background: #f0f0f0;
+    padding: 0;
+    line-height: 22px;
+    height: 26px;
+    appearance: none; /* this is must */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #555d66;
+    padding-left: 7px;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 13px;
+    border-radius: 5px;
+    transition: 50ms border-color ease-in-out, 50ms color ease-in-out, 50ms background ease-in-out;
+}
+
+#customize-theme-controls li.customize-control-select select::after {
+	font: 400 20px/72px dashicons;
+	content: "\f341";
+	position: relative;
+	left: 9px;
+}
+
+#customize-theme-controls li.customize-control-select select:hover {
+	border-color: #ccc;
+    background: #f5f5f5;
+
+}
+
+#customize-theme-controls li.customize-control-select select::-ms-expand {
+    display: none;
+}
+
+#customize-theme-controls li.customize-control-select option {
+    text-align: right;
+}
+
+
+
+
+
+
+/* Customizer Checkbox */
+
+#accordion-panel-ava__style-editor .customize-control-checkbox label {
+    line-height: 20px;
+    display: block;
+    margin-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+}
+
+#accordion-panel-ava__style-editor .customize-control-checkbox input {
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    border-radius: 100%;
+    height: 22px;
+    width: 22px;
+}
+
+#accordion-panel-ava__style-editor .customize-control-checkbox input[type=checkbox]:checked:before {
+    margin: 0px 0 0 -2px;
+}
+
+
+
+
+
+
+
+#customize-control-footer .description {
+    display: none;
+}
+
+#customize-control-ava__title-footerlayout {
+    margin: 0 0 10px;
+}
+#customize-control-ava__title-site {
+    margin-top: 0;
+}
+
+#customize-control-mobilenav,
+#customize-control-title-colophon,
+#customize-control-footer {
+    margin-top: 0;
+}
+
+.customize-control-checkbox,
+.customize-control-custom-range,
+.customize-control-select[id*="font"],
+#customize-control-blog_text_alignment,
+#customize-control-singlepost_pinterest_position,
+#customize-control-blog_infscr-animation,
+#customize-control-singlepost_sidebar,
+#customize-control-ava__singlepost-pinterest-position,
+#customize-control-ava__blog-columns  {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+.customize-control-color {
+	position: relative;
+	margin-top: 5px;
+}
+
+.customize-control-color .customize-control-title {
+	line-height: 20px;
+	margin: 0;
+}
+
+.customize-control-color label {
+	cursor: default;
+}
+
+.customize-control-color .wp-picker-container,
+.customize-control-color .wp-picker-container .iris-picker {
+	width: 100% !important;
+}
+
+.customize-control-color .wp-picker-container.wp-picker-active {
+	margin-bottom: 7px;
+	margin-top: -22px;
+}
+
+.customize-control-color .wp-picker-open + .wp-picker-input-wrap {
+	background: #eee;
+}
+
+.customize-control-color .wp-color-result.button {
+	margin-right: 3px;
+}
+
+.customize-control-color .wp-color-result-text {
+	display: none;
+}
+
+.customize-control-color .wp-color-result {
+	border-width: 0;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+	margin: 0;
+	position: absolute;
+	right: -3px;
+	top: -1px;
+	-webkit-transition: box-shadow 150ms cubic-bezier(0.694, 0.0482, 0.335, 1);
+	transition: box-shadow 150ms cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+
+.customize-control-color .wp-color-result:hover {
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+
+#customize-control-site_logo .actions {
+    margin-bottom: 0;
+}
+
+#customize-control-retina_logo {
+    margin-bottom: 20px;
+    margin-top: -5px;
+}
+
+/* Meta */
+.media-frame .attachments-browser .media-toolbar {
+    display: block!important;
+}
+
+.index-meta-table {
+    margin: 0;
+}
+
+.index-meta-table tr {
+    border-top: 1px solid #EEE;
+}
+
+.index-meta-table tr:first-child {
+    border-top: none;
+}
+
+.index-meta-table th {
+    padding: 20px 15px;
+    padding-right: 5%;
+    width: 35%;
+}
+
+.index-meta-table a {
+    outline: none!important;
+}
+
+.index-meta-table label span {
+    display: block;
+    color: #999;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 3px 0 0px 0;
+}
+
+.index-meta-table input,
+.index-meta-table textarea {
+    width: 100%;
+    margin-right: 5px;
+    float: left;
+}
+
+.index-meta-table select {
+    min-width: 150px;
+}
+
+.index-meta-table input.file {
+    width: 80%;
+}
+
+.index-meta-table input.button {
+    margin-right: 0;
+    outline: none!important;
+    width: auto;
+}
+
+.index-meta-table #ava_images_upload {
+    margin-top: 14px;
+}
+
+.index-meta-table input.radio {
+    float: none;
+    margin-right: 3px;
+    margin-top: 0px;
+    width: auto;
+}
+
+.index-meta-table .radio-label {
+    margin-right: 30px;
+}
+
+.index-meta-table input[type='checkbox'] {
+    margin-top: 1px;
+    margin-right: 10px;
+    width: 10px;
+}
+
+.index-meta-table td span,
+.index-meta-table .radio-label {
+    color: #999;
+    font-size: 13px;
+
+}
+
+/* Colorpicker styles */
+.index-box-color {
+    position: relative;
+}
+
+td.index-box-color {
+    padding: 36px 10px;
+}
+
+.index-box-color input {
+    margin-right: 10px;
+}
+
+.index-box-color .wp-color-picker {
+    width: 65px!important;
+}
+
+.index-box-color .button.button-small {
+    height: 23px!important;
+    margin-top: 1px;
+}
+
+.index-box-color .wp-picker-clear {
+    margin-left: 15px!important;
+}
+.index-box-color .wp-picker-clear {
+    margin-left: 15px!important;
+}
+
+.index-box-color .wp-color-result {
+    margin: 0 6px 3px 0!important;
+}
+
+.index-box-color .wp-color-result,
+.index-box-color .wp-color-result.wp-picker-open {
+    top: 1px!important;
+}
+
+
+/* Media meta */
+.post-type-portfolio .media-button-reverse {
+    display: none;
+}
+
+.index-meta-thumbnails {
+    clear: left;
+    margin-top: 50px;
+}
+
+.index-meta-thumbnails li {
+    float: left;
+    margin-right: 5px;
+}
+
+.index-meta-thumbnails li img {
+    height: 40px;
+}
+
+.index-meta-thumbnails img { vertical-align: bottom; }
+
+
+/* Portfolio side format selector */
+#side-sortables #portfolio-type.postbox .index-meta-table th {
+    padding: 0px;
+    vertical-align: middle;
+    width: 100%;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+#side-sortables #portfolio-type.postbox .index-meta-table strong {
+    font-weight: normal;
+    margin-top: 1px;
+}
+
+#side-sortables #portfolio-type.postbox .index-meta-table td span {
+    display: none;
+}
+
+#side-sortables #portfolio-type.postbox .index-meta-table input[type='checkbox'] {
+    margin: 0;
+}
+
+/**
+ * Adds custom styling for the widget media uploaders.
+ */
+
+.widget-media-container {
+    width: 100%;
+    margin-top: -9px;
+}
+
+.widget-no-image {
+    border: 1px dashed #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.widget-media-inner img {
+    max-width: 100%;
+    border-radius: 2px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.widget-media-url {
+    display: none;
+}
+
+.widget-media-remove {
+    float: left;
+    width: 48%;
+}
+
+.widget-media-upload {
+    float: right;
+    width: 48%;
+}
+
+#customize-control-custom_logo {
+	margin-top: 10px;
+	margin-bottom: 25px !important;
+}
+
+#customize-control-title-logo_max_width {
+	margin-top: 15px;
+}
+
+
+/**
+ * Logo Image Controls
+ */
+#sub-accordion-section-title_tagline .customize-control-image,
+#sub-accordion-section-title_tagline .customize-control-cropped_image {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+#sub-accordion-section-title_tagline .customize-control-image .customize-control-title,
+#sub-accordion-section-title_tagline .customize-control-cropped_image .customize-control-title {
+  margin-bottom: 0;
+}
+
+#sub-accordion-section-title_tagline .customize-control-image .placeholder,
+#sub-accordion-section-title_tagline .customize-control-cropped_image .placeholder {
+  display: none;
+}
+
+#sub-accordion-section-title_tagline .customize-control-image button:not(.control-focus):not(.remove-button),
+#sub-accordion-section-title_tagline .customize-control-cropped_image button:not(.control-focus):not(.remove-button) {
+  width: 100%;
+  border: 1px dashed #b4b9be;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 5px 0;
+  background: transparent;
+}
+
+#sub-accordion-section-title_tagline .customize-control-image button:not(.control-focus):not(.remove-button):hover,
+#sub-accordion-section-title_tagline .customize-control-cropped_image button:not(.control-focus):not(.remove-button):hover {
+  color: #0073aa;
+}
+
+#sub-accordion-section-title_tagline .customize-control-image button:not(.control-focus):not(.remove-button):active,
+#sub-accordion-section-title_tagline .customize-control-cropped_image button:not(.control-focus):not(.remove-button):active {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}

@@ -1,0 +1,557 @@
+** Ava Changelog **
+
+05 April 2019, Version 1.7.6
+	* New: Add support for the new `wp_body_open` hook in WordPress 5.2+
+	* Tweak: Admin 1.6.1
+
+08 March 2019, Version 1.7.5
+	* Fix: Ethan portfolio captions display properly
+	* Tweak: Adjust product review avatars to display better
+	* Tweak: Add support for Beaver Builder 2.0+
+
+19 November 2018, Version 1.7.4
+	* New: Add support for WooCommerce 3.5.1
+	* New: Add support for PHP 7.2
+
+15 October 2018, Version 1.7.3
+	* Fix: Resolve issue where variable quantity limits were not imposed on the quantity selector
+
+16 August 2018, Version 1.7.2
+	* Tweak: Resolve fixed WooCommerce checkout page display errors
+	* Tweak: Add the colophon back on the WooCommerce checkout page
+
+16 August 2018, Version 1.7.1
+	* Tweak: Hide the colophon on the WooCommerce checkout page
+	* Tweak: Minor style adjustments for the WooCommerce checkout page
+
+03 August 2018, Version 1.7.0
+	* Tweak: Add woocommerce_before_add_to_cart_button hook to variations
+	* Tweak: Adjust the WooCommerce account_page_url
+	* Tweak: Admin v1.4.4
+
+12 July 2018, Version 1.6.9
+	* Tweak: Improve rendering of variable product add to cart button
+
+12 July 2018, Version 1.6.8
+	* Tweak: Add loading icon to the WooCommerce checkout page
+
+06 July 2018, Version 1.6.7
+	* Tweak: Products with long titles now display correctly within the mini-cart
+
+29 June 2018, Version 1.6.6
+	* Fix: Update WC quantity input to accurately reflect inventory
+	* Fix: Use get_max_purchase_quantity() for mini-cart
+	* Fix: Beaver Builder portfolio external link fix
+	* Tweak: Add conditional display logic for the Site Editor optional logo controls
+	* Tweak: Set min-width for select.qty
+	* Tweak: Add updated Facebook icon
+	* Tweak: Major PHPCS code clean-up
+	* Tweak: Admin v1.4.3
+
+21 June 2018, Version 1.6.5
+	* Tweak: Improve WooCommerce Terms & Conditions display on the checkout view
+
+07 June 2018, Version 1.6.4
+	* Tweak: Display product SKU within the More Information panel when a product has attributes
+	* Tweak: Add namespace prefix to the Beaver Builder team module
+	* Tweak: Improve checkout view variations
+
+31 May 2018, Version 1.6.3
+	* Fix: Checkout button now displays the proper accent color
+	* Tweak: Adjust positioning of the WooCommerce privacy policy text
+
+25 May 2018, Version 1.6.2
+	* Fix: Improve styling of the WooCommerce variation color swatches
+
+23 May 2018, Version 1.6.1
+	* New: WooCommerce 3.4.0 compatibility
+	* Fix: Properly check for visible attributes before rendering the more information element
+
+22 May 2018, Version 1.6.0
+	* Fix: Mobile search icon display issue
+	* Fix: Mini-cart bug on mobile scroll
+	* Tweak: Update to woocommerce_add_to_cart_fragments()
+	* Tweak: Add proper translations to ava_page_title()
+
+20 April 2018, Version 1.5.9
+	New:
+		* All Customizer controls are now rendered faster via JS Underscore templates
+
+	Fixes & Updates:
+		* Fix WooCommerce tags archive view to properly display tagged products
+		* Adjust gallery shop grid on large viewports
+		* Inline Dashboard Doc is now even faster
+		* Update /admin/ to v1.4.1
+
+
+22 March 2018, Version 1.5.8
+	New:
+		* Add a new widget area for the WooCommerce shop page
+		* Add new JS rendered toggle and title controls
+
+	Fixes & Updates:
+		* Fix shop display issue in Edge
+		* Adjust Customizer live controls for the top-header element
+		* Add support for third level drop-down menus
+		* Prep for an upcoming release with Merlin WP support
+		* Update /admin/ to v1.3.4-b
+		* Update documentation
+
+
+28 February 2018, Version 1.5.7
+	Fixes & Updates:
+		* Fix an issue where the custom light logo was not properly resized
+
+
+21 February 2018, Version 1.5.6
+	Fixes & Updates:
+		* Fixed an issue where the mini-cart's text was not properly rendering
+		* Resolves an issue where some servers were not able to properly validate licenses
+		* Updated /admin/ to v1.3.3
+
+
+09 February 2018, Version 1.5.5
+	Fixes & Updates:
+		* Migrated the ava_sanitize_number_absint() sanitization function to use absint()
+		* Updated /admin/ to v1.3.2
+
+
+08 February 2018, Version 1.5.4
+	Fixes & Updates:
+		* Tweaked the Carson module to accept external portfolio post URLs
+
+
+05 February 2018, Version 1.5.3
+	New:
+		* Added font styling options for the Top Editor panel within the Customizer Site Editor
+
+	Fixes & Updates:
+		* Tweaked styling for the PayPal for WooCommerce plugin
+		* Tweaked syling for the Product Delivery Date for WooCommerce plugin
+
+
+01 February 2018, Version 1.5.2
+	New:
+		* Added a new Beaver Builder option to modify the overlay background color on the Liam portfolio module
+		* Added a new Site Editor option to modify the overlay and overlay text colors on the portfolio taxonomy and archivial pages
+		* Added a social icon for Resident Advisor
+
+	Fixes & Updates:
+		* Resolved an issue where a portfolio's tags and categories were not displaying on the front-end
+		* Minor portfolio style improvements
+		* Tweaked the Dashboard Doc module for improved UI/X
+		* Tweaked the Dashboard Doc module to better support alternate WordPress admin color schemes
+		* Updated the Dashboard Doc module to enable you to search for queries in our Help Center
+		* Updated /admin/ to v1.3.1 with improved filtering, CMB2 updates, the new Dashboard Doc module and improved white-labeling options
+
+
+22 January 2018, Version 1.5.1
+	New:
+		* Added a new Site Editor option to use standard pagination instead of infinite loading on the shop page
+
+	Fixes & Updates:
+		* Fixed Safari display issue when the filter is opened on the gallery shop layout
+		* Minor WooCommerce compatibility improvements
+
+
+19 January 2018, Version 1.5.0
+	New:
+		* Added compatibility for the upcoming WooCommerce 3.3 update
+		* Added minified Customizer, Visual Editor and Gutenberg assets with SCSS/auto-prefixing support
+
+	Fixes & Updates:
+		* Fixed WooCommerce display issues within FireFox
+		* Added new author biography fallbacks
+		* Added minified Customizer JS and editor stylesheet assets with auto-prefixing
+		* Improved debug mode that now works with minified asset delivery throughout the entire theme
+		* Fixed display of typing animated text on mobile
+
+
+18 December 2017 - Version 1.4.9
+	Fixes & Updates:
+		* Fixed FireFox display error with the Carson portfolio module
+
+
+16 December 2017 - Version 1.4.8
+	Fixes & Updates:
+		* Fixed an issue where WooCommerce's image captions were displaying within the product lightbox
+
+
+14 December 2017 - Version 1.4.7
+	Fixes & Updates:
+		* Fixed an issue where the lightbox gallery was interferring with portfolio post content
+		* Updated languages
+
+
+12 December 2017 - Version 1.4.6
+	Fixes & Updates:
+		* Fixed the Gavin portfolio image display issue that was introduced in the latest Beaver Builder update
+		* Removed the custom accordion module for improved dependancy management
+		* Updated languages
+
+
+07 December 2017 - Version 1.4.5
+	New:
+		* Beaver Themer support!
+		* Gavin now supports external portfolio URLs
+
+
+05 December 2017 - Version 1.4.4
+	New:
+		* Added lightbox captions for media galleries using the Ethan Beaver Builder module
+		* Gavin external url support
+
+	Fixes & Updates:
+		* Tweaked invalid control sanitization for some Customizer settings
+		* Updated languages
+
+
+05 December 2017 - Version 1.4.3
+	Fixes & Updates:
+		* Tweaked color customizer control for WordPress 4.9.1+
+
+
+20 November 2017 - Version 1.4.2
+	Fixes & Updates:
+		* Tweaked author biography display
+
+
+16 November 2017 - Version 1.4.1
+	New:
+		* Added WordPress 4.9 Customizer style support
+		* Added support for Login Designer
+
+
+09 November 2017 - Version 1.4.0
+	New:
+		* Added support for WordPress 4.9
+		* Added new Customizer toggle controls for improved site editing UX
+		* Introduced a new license Customizer control for managing your theme license
+		* Removed the dashboard license widget
+
+	Fixes & Updates:
+		* Updated languages
+
+
+12 October 2017 - Version 1.3.7
+	New:
+		* Added support for WooCommerce 3.2.0
+
+
+12 October 2017 - Version 1.3.6
+	Fixes & Updates:
+		* Added support for WP Gravatar Logo
+			- https://wordpress.org/plugins/wp-gravatar-logo
+		* Added filters to make it easier to customize the portfolio pagination next/prev text
+			-https://gist.github.com/richtabor/602e1ae73a2cbecaf67cd474d3649459
+		* Updated languages
+
+
+03 October 2017 - Version 1.3.5
+
+	Fixes & Updates:
+		* Fixed portfolio pagination header font selection
+
+
+28 September 2017 - Version 1.3.4
+	New:
+		* Added support for the WooCommerce Currency Switcher plugin
+
+	Fixes & Updates:
+		* Improved Site Editor content styling for the singular product excerpts
+		* Updated languages
+
+
+27 September 2017 - Version 1.3.3
+	New:
+		* Added a new option to enable Prev/Next pagination on portfolio posts
+
+	Fixes & Updates:
+		* Updated /admin/ to v1.1.3
+		* Added conditional checks in the Site Editor for post types
+		* Updated languages
+
+
+24 August 2017 - Version 1.3.2
+	Fixes & Updates:
+		* Updated /admin/ to v1.1.2
+		* Added conditional checks for Envato Hosted accounts
+		* Fixed error on single pages, if WooCommerce was not activated
+		* Updated languages
+
+
+17 August 2017 - Version 1.3.1
+	New:
+		* Added a new Site Editor option to change mini-cart link from "Checkout" to "View Cart"
+		* Added new conditional options settings to improve the overall Customizer UX
+		* Added support for adding social icons in a Custom Menu Widget — name your social menu "Social Menu" to use it
+
+	Fixes & Updates:
+		* Fixed an issue where the product grid price did not turn off in the Site Editor live previewer
+		* Fixed Pinterest sharing issue on singular product views
+		* Fixed an obscure FireFox bug affected the columns layout of the Beaver Builder shop module
+		* Fixed 404 header color display error
+		* Fixed an obsucure singular product view slider z-index error on mobile
+		* Improved the social navigation display on mobile to prevent overflow issues
+		* Improved the display of very long product titles
+		* Improved Apple Pay styles to improve the cart/checkout experience.
+		* Improved mobile dropdown navigation styles
+		* Improved the Site Editor UI
+		* Updated file headers
+		* Updated languages
+
+
+13 July 2017 - Version 1.3.0
+	New:
+		* Added two new single product layout options
+		* Added a new zooming feature to the single product gallery
+		* Added a new lightbox feature to the single product gallery
+		* Added three new product hover effects, selectable via the Site Editor
+		* Added Typekit support! Add your Typekit Kit ID to the new Site Editor option, located within the Fonts panel
+		* Added a new Site Editor option to change the single product layout
+		* Added a new Site Editor option to enable or disable the product gallery lightbox
+		* Added a new Site Editor option to enable or disable the product gallery zooming feature
+		* Added a new Site Editor option to set your column sizes (Small, Medium and Large) if you're using the columns shop layout
+		* Added a new Site Editor option to set your column gutter sizes to anything between 0 and 100px
+		* Added a new Site Editor option to center product grid titles on the top or bottom
+		* Added a new Site Editor option to style the WooCommerce sale flash as a circlular badge, or square
+		* Added a new Site Editor option to set the size of the WooCommerce sale flash
+		* Added a new Site Editor option to customize the text of the WooCommerce sale flash
+		* Added a new Site Editor option to position the WooCommerce sale flash to the left, right, top, bottom or centered
+		* Added a new Site Editor option to disable the WooCommerce sales flash
+		* Added a new Site Editor option to disable the blogroll and single post author byline metadata
+		* Added a new Site Editor option to disable the blogroll and single publish date metadata
+		* Added a new Site Editor option to enable the primary menu on the mobile menu. Great if you have a language select menu
+		* Added tooltips to the Customizer, in case you need a tip!
+		* Added new product featured image placeholder functionality
+
+	Fixes & Updates:
+		* Updated Admin Framework to v1.1.0
+		* Moved custom Customizer controls into the admin framework, for easy portability and upkeep
+		* Improved the social navigation dipslay options. There's no need to activate each social menu option via the Site Editor
+		* Improved the display of social icons on Safari
+		* Improved the UX of the dropdown menu items
+		* Improved the Site Editor dropdown selector Customizer controls
+		* Improved the Site Editor image uploader Customizer controls
+		* Improved the Site Editor range Customizer controls
+		* Removed Unslider and it's dependancies
+		* Updated core Beaver Builder templates
+		* Updated languages
+
+
+29 June 2017 - Version 1.2.8
+	New:
+		* Added a social icon for Houzz
+
+	Fixes & Updates:
+		* Updated /admin/ to v1.0.2
+		* Updated and improved checkout styles
+		* Updated WooCommerce templates to support the recent 3.1.0 release
+
+
+22 June 2017 - Version 1.2.7
+	New:
+		* Added a new Site Editor option to turn off/on product page breadcrumbs
+		* Added a new Site Editor option for customizing the background color of the single product galleries
+
+	Fixes & Updates:
+		* Removed WooCommerce pre 3.0 fallbacks, as they're not needed anymore
+		* Transitioned the /admin/ directory to utilize the new framework structure
+		* Updated the included Beaver Builder modal styling
+		* Updated a few translation strings
+
+
+09 June 2017 - Version 1.2.6
+	New:
+		* Added a "Shipping Details" header on the WooCommerce checkout page
+
+	Fixes & Updates:
+		* Minor Customizer UI update for WordPress 4.8
+		* Updated languages
+
+
+04 June 2017 - Version 1.2.5
+	Fixes & Updates:
+		* Updated languages
+
+
+30 May 2017 - Version 1.2.4
+	New:
+		* Added a custom placeholder image for WooCommerce products
+
+	Fixes & Updates:
+		* Improved translation capabilities of rouge strings
+		* Fixed an edge case grid display issue
+		* Fixed the "View More" text positioning on external products
+
+
+24 May 2017 - Version 1.2.3
+	Fixes & Updates:
+		* Checkout button color now changes with the Customizer button color settings
+		* Minor checkout style improvements
+
+
+22 May 2017 - Version 1.2.2
+	New:
+		* Added Beaver Tunnels support
+			- Take advantage of theme action hooks available to inject Beaver Builder modules throughout your website
+			- Ref: https://beavertunnels.com
+    Fixes & Updates:
+    	* Simplified the naming convention of custom theme actions
+    	* Tweaked the mobile colophon menu line height
+
+
+08 May 2017 - Version 1.2.1
+    Fixes & Updates:
+        * Improved the mobile checkout styles
+        * Improved the login + register account pages
+        * Improved credit card checkout module
+
+
+08 May 2017 - Version 1.2.0
+	New:
+		* Added a new Customizer option for the Header Checkout Icon to link to either the WooCommerce cart or checkout pages
+    Fixes & Updates:
+        * Improved the mobile checkout styles
+
+
+05 May 2017 - Version 1.1.9
+    Fixes & Updates:
+        * Fixed the output of an external product purchase button. Thanks Ian!
+
+
+27 April 2017 - Version 1.1.8
+    New:
+        * Added support for portfolio gallery modules to be displayed on single portfolio posts. 👍
+        * Added new filters for the comment form placeholders: [https://gist.github.com/richtabor/ce61640889597b1756798a195998bd52]
+        * Added new filters to modify the default Site Editor fonts: [https://gist.github.com/richtabor/68dc45ebd61d615deb718a17c6e35101]
+
+    Fixes & Updates:
+        * Fixed custom logo width display errors in IE11
+
+
+19 April 2017 - Version 1.1.7
+    Fixes & Updates:
+        * Updated Superfish to v1.7.9 - resolves an issue with dropdowns displaying properly in IE11
+        * Updated Photoswipe to v4.1.2 - resolves an issue with lightboxes displaying properly in IE11
+        * WooCommerce loop title display fix
+
+
+13 April 2017 - Version 1.1.6
+    New:
+        * Added support for WPML. New wpml-config.xml file.
+
+    Fixes & Updates:
+        * Updated template files for WooCommerce 3.0.2
+
+
+12 April 2017 - Version 1.1.5
+    Fixes & Updates:
+        * Fixed Beaver Builder modal styles
+        * Updated template files for WooCommerce 3.0.1
+
+
+04 April 2017 - Version 1.1.4
+    New:
+        * Added support for WooCommerce 3.0 🚀, with pre 3.0 fallbacks in place. 🙌
+        * Added a new filter - ava_upsells_text() - to modify the single product upsells text
+    Fixes & Updates:
+        * WooCommerce product attributes display fix
+        * Updated the updater
+
+
+03 April 2017 - Version 1.1.3
+    New:
+        * Added two additional display options for the Single Product gallery slider navigation
+            - Check them out in the Site Editor > Single Product view; just make sure you're looking at a single product so you can see the options
+        * Added a new color picker option for the Single Product gallery slider naviation elements
+        * Added filters for the Site Editor color defaults. You can now programmatically filter default colors
+            - https://gist.github.com/richtabor/373b09420a9c19882f19c639b619d078
+
+    Fixes & Updates:
+        * Updated the TGMPA notice to not display Beaver Builder lite, when the Pro version is active
+        * Improved inline documentation styles and scripts
+        * Child theme Customizer scripts enqueue fix
+
+
+01 April 2017 - Version 1.1.2
+    New:
+        * Added Josefin Sans font to the Site Editor font selectors
+
+    Fixes & Updates:
+        * Touched up font styles
+        * SVG icons now display beautifully when you're logged in as well
+
+
+31 March 2017 - Version 1.1.1
+    Fixes & Updates:
+        * Improved default styling for MemberPress
+
+
+30 March 2017 - Version 1.1.0
+    New:
+        * Added a Blank Template - without the standard header or footer, to give you more creative possibilities with Beaver Builder and start from scratch
+
+    Fixes & Updates:
+        * Improved screen-reader text for better accessibility
+        * Improved compatibility with older PHP versions
+
+
+20 March 2017 - Version 1.0.9
+    Fixes & Updates:
+        * Product reviews now turn off when you want them off
+
+
+19 March 2017 - Version 1.0.8
+    Fixes & Updates:
+        * Firefox browser fixes
+
+
+19 March 2017 - Version 1.0.7
+    Fixes & Updates:
+        * Flyout update
+        * Resolved documentation styles on ancient browsers
+
+
+19 March 2017 - Version 1.0.6
+    Fixes & Updates:
+        * Resolved documentation styles on ancient browsers
+
+
+18 March 2017 - Version 1.0.5
+    Fixes & Updates:
+        * Resolved an issued that occured when there's a widget added to the Flyout
+        * Added a product image fallback, which displays if you have not uploaded gallery images
+
+
+15 March 2017 - Version 1.0.4
+    New:
+        * Added Bean Team Members Post Type to the TGMPA loader
+
+    Fixes & Updates:
+        * Resolved AJAX cart icon display issue
+        * Resolved body fonts display issue
+
+
+14 March 2017 - Version 1.0.3
+    Fixes & Updates:
+        * Resolved edge case "unknown license key" issue
+
+
+14 March 2017 - Version 1.0.2
+    New:
+        * Added new opacity portfolio hover option
+        * Added new in-dashboard help guides. — Need help? Check out the new the Ava Help Guide right into the admin dashboard via the small "question-mark" icon on the bottom right of your window. Also, we'll be consistently improving the guide... remotely! So you'll automagically receive updated guides. Cool!
+
+    Fixes & Updates:
+        * Updated templates.dat file to include the new Jackson portfolio template. Have template/portfolio suggestions? Let us know at hello@themebeans.com!
+        * Updated variation and quantity select.svg icons
+
+
+13 March 2017 - Version 1.0.1
+    New:
+        * Added a new portfolio template — Jackson! http://demo.themebeans.com/ava/portfolios/jackson
+
+
+13 March 2016 - Version 1.0.0
+    * Initial release
