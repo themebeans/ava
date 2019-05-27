@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.1.0
+ * @version 3.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-if ( 'no' === get_option( 'woocommerce_enable_review_rating' ) ) {
+if ( ! wc_review_ratings_enabled() ) {
 	return;
 }
 
@@ -55,7 +55,9 @@ if ( $rating_count > 0 ) : ?>
 		<?php
 		if ( comments_open() ) :
 ?>
+<?php //phpcs:disable ?>
+
 <a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?php printf( _n( '%s review', '%s reviews', $review_count, 'ava' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a><?php endif ?>
 	</div>
-
+	<?php // phpcs:enable ?>
 <?php endif; ?>
