@@ -13,7 +13,7 @@
  * @see         https://docs.woocommerce.com/document/template-structure/
  * @author      WooThemes
  * @package     WooCommerce/Templates
- * @version     3.5.0
+ * @version     3.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -34,15 +34,18 @@ if ( ! comments_open() ) {
 		<div class="reviews__inner_padding">
 
 			<div id="comments">
-				<h2 class="woocommerce-Reviews-title">
-					<?php
-					if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) ) {
-						printf( _n( '%1$s review for %2$s%3$s%4$s', '%1$s reviews for %2$s%3$s%4$s', $count, 'ava' ), $count, '<span>', get_the_title(), '</span>' );
-					} else {
-						esc_html_e( 'Reviews', 'ava' );
-					}
-				?>
-				</h2>
+			<h2 class="woocommerce-Reviews-title">
+			<?php
+			$count = $product->get_review_count();
+			if ( $count && wc_review_ratings_enabled() ) {
+				/* translators: 1: reviews count 2: product name */
+				$reviews_title = sprintf( esc_html( _n( '%1$s review for %2$s%3$s%4$s', '%1$s reviews for %2$s%3$s%4$s', $count, 'ava' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
+				echo apply_filters( 'woocommerce_reviews_title', $reviews_title, $count, $product ); // WPCS: XSS ok.
+			} else {
+				esc_html_e( 'Reviews', 'ava' );
+			}
+			?>
+			</h2>
 
 				<?php if ( have_comments() ) : ?>
 
@@ -95,9 +98,11 @@ if ( ! comments_open() ) {
 								'comment_field'       => '',
 							);
 
-						if ( $account_page_url = wc_get_page_permalink( 'myaccount' ) ) {
-								$comment_form['must_log_in'] = '<p class="must-log-in">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a review.', 'ava' ), esc_url( $account_page_url ) ) . '</p>';
-						}
+							$account_page_url = wc_get_page_permalink( 'myaccount' );
+							if ( $account_page_url ) {
+								/* translators: %s opening and closing link tags respectively */
+								$comment_form['must_log_in'] = '<p class="must-log-in">' . sprintf( esc_html__( 'You must be %1$slogged in%2$s to post a review.', 'woocommerce' ), '<a href="' . esc_url( $account_page_url ) . '">', '</a>' ) . '</p>';
+							}
 
 						if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' ) {
 							$comment_form['comment_field'] = '<p class="comment-form-rating"><label for="rating">' . __( 'Your Rating:', 'ava' ) . '</label><select name="rating" id="rating" aria-required="true" required>
